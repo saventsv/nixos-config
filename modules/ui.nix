@@ -2,7 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     quickshell
-    nerd-fonts.iosevka
+  ];
+  
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka-term 
   ];
 }
 
