@@ -6,6 +6,7 @@
       enable = true;
       # TODO add custom background
     };
+  };
 }
 
 

@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 {
 
-  envoronment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     fd
     ripgrep
     fastfetch

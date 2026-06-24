@@ -5,11 +5,11 @@
   services.xserver.windowManager.dwm = {
     enable = true;
     package = pkgs.dwm.overrideAttrs (oldAttrs: {
-      src = ./modules/dwm;
+      src = ../dotfiles/dwm;
     });
   };
 
-  envoronment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
     alacritty # backup
 
