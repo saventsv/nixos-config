@@ -74,8 +74,6 @@
    ];
  };
 
-  programs.firefox.enable = true;
-
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -85,6 +83,8 @@
     dmenu # TODO remove this when getting a desktop up
     git
     keepassxc
+    xclip
+    firefox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
