@@ -28,6 +28,7 @@
   # Set your time zone.
   time.timeZone = "America/Chicago";
   hardware.bluetooth.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
 
   # Configure network proxy if necessary
