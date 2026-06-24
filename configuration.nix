@@ -27,6 +27,8 @@
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
+  hardware.bluethooth.enable = true;
+
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -50,6 +52,7 @@
     });
   };
 
+  services.dunst.enable = true;
 
   
 
@@ -92,7 +95,19 @@
     keepassxc
     xclip
     firefox
+    tmux
+    vscode
+    picom
+    quickshell
+    flameshot
+    fd
+    ripgrep
   ];
+
+  programs.fzf = {
+    keybindings = true;
+    fuzzyCompletions = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
