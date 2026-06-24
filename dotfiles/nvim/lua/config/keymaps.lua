@@ -1,0 +1,49 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local set = vim.keymap.set
+
+-- General
+set('n', '<C-d>', '<C-d>zz')
+set('n', '<C-u>', '<C-u>zz')
+set('i', '<C-Backspace>', '<C-w>', { silent = true })
+-- set({'n', 'v'}, '<C-y>', '"+y', { desc = 'Copy to system clipboard' })
+set({'n'; 'v'}, '<leader>cc', '"+y', { desc = 'Copy to system clipboard' })
+set('i', '<C-v>', '<C-g>u<C-r><C-o>+')
+set('n', 'gh', ':nohl<CR>')
+set('v', '<leader>rs', ':s/')
+set('n', '<leader>rf', ':%s/')
+set('n', '<leader>rl', ':s/')
+set('n', '<leader>rw', [[:s/\<<C-r><C-w>\>//g<Left><Left>]])
+set('n', '<leader>hs', ':split<CR>')
+set('n', '<leader>vs', ':vsplit<CR>')
+
+
+-- file explorers
+set('n', '<leader>fe', ':Ex<CR>')
+
+-- buffers
+set('n', '<Tab>', ':bnext<CR>')
+set('n', '<S-Tab>', ':bprev<CR>')
+
+set('n', '<C-h>', '<C-w>h')
+set('n', '<C-j>', '<C-w>j')
+set('n', '<C-k>', '<C-w>k')
+set('n', '<C-l>', '<C-w>l')
+
+-- terminal
+set('t', '<C-h>', [[<C-\><C-N><C-w>h]])
+set('t', '<C-j>', [[<C-\><C-N><C-w>j]])
+set('t', '<C-k>', [[<C-\><C-N><C-w>k]])
+set('t', '<C-l>', [[<C-\><C-N><C-w>l]])
+
+set('n', '<leader>vs', ':vsplit<CR>')
+set('n', '<leader>hs', ':split<CR>')
+
+set('n', '<leader>cb', ':close<CR>')
+
+-- quickfix list
+set('n', '<leader>ca', ':silent! grepadd ')
+set('n', '<leader>co', ':copen<CR>')
+-- set('n', '<leader>cc', ':cclose<CR>')
+set('n', '<leader>cd', ':cexpr []<CR>')
