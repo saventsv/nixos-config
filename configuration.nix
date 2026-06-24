@@ -27,7 +27,7 @@
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
-  hardware.bluethooth.enable = true;
+  hardware.bluetooth.enable = true;
 
 
   # Configure network proxy if necessary
@@ -106,7 +106,7 @@
 
   programs.fzf = {
     keybindings = true;
-    fuzzyCompletions = true;
+    fuzzyCompletion = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
