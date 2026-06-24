@@ -103,6 +103,18 @@
     flameshot
     fd
     ripgrep
+    fastfetch
+    rofi
+
+    (pkgs.st.overrideAttrs (oldAttrs: {
+      src = ./st; # Points directly to /etc/nixos/st
+    }))
+
+  # Custom DMENU built from the local directory
+    (pkgs.dmenu.overrideAttrs (oldAttrs: {
+      src = ./dmenu; # Points directly to /etc/nixos/dmenu
+    }))
+
   ];
 
   programs.fzf = {
