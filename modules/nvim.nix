@@ -14,6 +14,11 @@
     jdt-language-server
     clang-tools
 
+
+    # quickshell lsp
+    qt6.qtdeclarative   
+    qt6.qttools
+
     # tree-sitter parsers
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
       p.go
@@ -23,6 +28,7 @@
       p.nix
       p.bash
       p.java
+      p.qmljs
     ]))
   ];
 
