@@ -9,12 +9,12 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	[SchemeNorm] = {"#D3C6AA", "#1E2326" },
+	[SchemeSel] = {"#1E2326", "#A7C080" },
+	[SchemeOut] = {"#00ffff", "#000000"},
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines = 10;
 
 /*
  * Characters not considered part of a word while deleting words
