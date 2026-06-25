@@ -5,6 +5,8 @@
     /etc/nixos/hardware-configuration.nix
     ../../base.nix
     ../../modules/backup.nix
+    ../../modules/work.nix
+    ../../modules/battery.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
