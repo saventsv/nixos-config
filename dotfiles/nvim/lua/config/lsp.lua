@@ -28,9 +28,13 @@ vim.lsp.config("pyright", {
 vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
+vim.lsp.config("qmlls", {
+  capabilities = capabilities,
+})
 
 vim.lsp.enable({
   "gopls",
+  "qmlls",
   "lua_ls",
   "clangd",
   "bashls",
