@@ -2,17 +2,12 @@
 {
   services.xserver.displayManager.lightdm = {
     enable = true;
-    background = "/etc/lightdm/ferns.jpg";
     greeters.slick = {
       enable = true;
-
-      extraConfig = ''
-        [Greeter]
-        draw-user-backgrounds=false
-        /etc/lightdm/ferns.jpg
-      '';
     };
+    background = "/etc/lightdm/ferns.jpg";
   };
+  environment.etc."lightdm/ferns.jpg".source = ./wallpapers/ferns.jpg;
 }
 
 
