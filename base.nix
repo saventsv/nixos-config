@@ -1,5 +1,10 @@
 {...}:
 {
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
   imports = [
     ./modules/base-system.nix
     ./modules/display-manager.nix
