@@ -1667,95 +1667,95 @@ setgaps(int oh, int ov, int ih, int iv)
 	arrange(selmon);
 }
 
-void
-togglegaps(const Arg *arg)
-{
-	enablegaps = !enablegaps;
-	arrange(selmon);
-}
-
-void
-defaultgaps(const Arg *arg)
-{
-	setgaps(gappoh, gappov, gappih, gappiv);
-}
-
-void
-incrgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov + arg->i,
-		selmon->gappih + arg->i,
-		selmon->gappiv + arg->i
-	);
-}
-
-void
-incrigaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih + arg->i,
-		selmon->gappiv + arg->i
-	);
-}
-
-void
-incrogaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov + arg->i,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrohgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh + arg->i,
-		selmon->gappov,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrovgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov + arg->i,
-		selmon->gappih,
-		selmon->gappiv
-	);
-}
-
-void
-incrihgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih + arg->i,
-		selmon->gappiv
-	);
-}
-
-void
-incrivgaps(const Arg *arg)
-{
-	setgaps(
-		selmon->gappoh,
-		selmon->gappov,
-		selmon->gappih,
-		selmon->gappiv + arg->i
-	);
-}
+// void
+// togglegaps(const Arg *arg)
+// {
+// 	enablegaps = !enablegaps;
+// 	arrange(selmon);
+// }
+//
+// void
+// defaultgaps(const Arg *arg)
+// {
+// 	setgaps(gappoh, gappov, gappih, gappiv);
+// }
+//
+// void
+// incrgaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh + arg->i,
+// 		selmon->gappov + arg->i,
+// 		selmon->gappih + arg->i,
+// 		selmon->gappiv + arg->i
+// 	);
+// }
+//
+// void
+// incrigaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh,
+// 		selmon->gappov,
+// 		selmon->gappih + arg->i,
+// 		selmon->gappiv + arg->i
+// 	);
+// }
+//
+// void
+// incrogaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh + arg->i,
+// 		selmon->gappov + arg->i,
+// 		selmon->gappih,
+// 		selmon->gappiv
+// 	);
+// }
+//
+// void
+// incrohgaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh + arg->i,
+// 		selmon->gappov,
+// 		selmon->gappih,
+// 		selmon->gappiv
+// 	);
+// }
+//
+// void
+// incrovgaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh,
+// 		selmon->gappov + arg->i,
+// 		selmon->gappih,
+// 		selmon->gappiv
+// 	);
+// }
+//
+// void
+// incrihgaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh,
+// 		selmon->gappov,
+// 		selmon->gappih + arg->i,
+// 		selmon->gappiv
+// 	);
+// }
+//
+// void
+// incrivgaps(const Arg *arg)
+// {
+// 	setgaps(
+// 		selmon->gappoh,
+// 		selmon->gappov,
+// 		selmon->gappih,
+// 		selmon->gappiv + arg->i
+// 	);
+// }
 
 void
 setlayout(const Arg *arg)
