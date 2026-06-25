@@ -1,0 +1,41 @@
+# ~/.bashrc
+
+# Don't put duplicate commands in history
+HISTCONTROL=ignoreboth
+
+# Larger history
+HISTSIZE=10000
+HISTFILESIZE=20000
+
+set completion-ignore-case on
+
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s cdspell
+
+# Colored ls
+alias ls='ls --color=auto'
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+
+
+# fzf keybindings if installed
+# if [ -f ~/.fzf.bash ]; then
+#     source ~/.fzf.bash
+# fi
+
+eval "$(fzf --bash)"
+
+bind -x '"\C-f": __fzf_cd__'
+
+# User scripts
+PROMPT_COMMAND='echo'
+export PATH="$HOME/.local/bin:$PATH"
+
+# Editor
+export EDITOR=nvim
+export VISUAL=nvim
+export MANPAGER='nvim +Man!'
+PS1='\u \w\n> '

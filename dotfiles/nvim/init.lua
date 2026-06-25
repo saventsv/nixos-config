@@ -1,5 +1,4 @@
 -- Options
-
 local opt = vim.opt
 local group = vim.g
 
@@ -44,4 +43,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+require("config.plugins")
 require("config.keymaps")
+require("config.lsp")
+require("config.cmp")

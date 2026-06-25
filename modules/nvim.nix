@@ -12,6 +12,7 @@
     nixd
     bash-language-server
     jdt-language-server
+    clang-tools
 
     # tree-sitter parsers
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
