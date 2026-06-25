@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 {
   environment.systemPackages = with pkgs; [
-    emacs
+    alacritty
   ];
+  services.xserver.windowManager.i3.enable = true;
 }
-

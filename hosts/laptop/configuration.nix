@@ -2,10 +2,9 @@
 
 {
   imports = [
-    # 1. Include the results of the hardware scan
     /etc/nixos/hardware-configuration.nix
-
     ../../base.nix
+    ../../modules/backup.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
