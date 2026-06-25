@@ -29,7 +29,9 @@ vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
 vim.lsp.config("qmlls", {
-  capabilities = capabilities,
+  cmd = { "qmlls", "-E" },
+  filetypes = { "qml" },
+  -- capabilities = capabilities,
 })
 
 vim.lsp.enable({
