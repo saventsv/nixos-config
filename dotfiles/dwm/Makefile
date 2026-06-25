@@ -8,6 +8,9 @@ OBJ = ${SRC:.c=.o}
 
 all: options dwm dwm-msg
 
+options:
+	@echo dwm build options:
+
 .c.o:
 	${CC} -c ${CFLAGS} $<
 
