@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -26,7 +26,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"picom", NULL,
-	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers" NULL, 
+	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
   NULL /* terminate */
 };
 
@@ -71,8 +71,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL }; */
-// static const char *dmenucmd[] = {"dmenu_run", NULL};
-static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL}; // Temporary until dmenu patching is done
+static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
