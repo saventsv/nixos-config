@@ -2,6 +2,8 @@ vim.pack.add({
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.surround",
 
+  "https://github.com/wakatime/vim-wakatime",
+
   "https://github.com/neanias/everforest-nvim",
 
   "https://github.com/nvim-lua/plenary.nvim", -- dependancy for harpoon
@@ -51,37 +53,6 @@ vim.api.nvim_create_autocmd("InsertEnter", {
   callback = function()
     local autopairs = require("nvim-autopairs")
     autopairs.setup({})
-  end,
-})
-
--- local cmp = require("blink.cmp")
---
--- cmp.setup({
---   keymap = {
---     preset = "default",
---   },
---
---   sources = {
---     default = { "lsp", "path", "snippets", "buffer" },
---   },
--- })
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    local ok, cmp = pcall(require, "blink.cmp")
-    if not ok then
-      return
-    end
-
-    cmp.setup({
-      keymap = {
-        preset = "default",
-      },
-
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
-      },
-    })
   end,
 })
 

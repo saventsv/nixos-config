@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     go
     gcc
-    make
+    gnumake
     maven
     python3
     nodejs

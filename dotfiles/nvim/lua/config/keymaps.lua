@@ -8,8 +8,9 @@ set('n', '<C-d>', '<C-d>zz')
 set('n', '<C-u>', '<C-u>zz')
 set('i', '<C-Backspace>', '<C-w>', { silent = true })
 -- set({'n', 'v'}, '<C-y>', '"+y', { desc = 'Copy to system clipboard' })
-set({'n'; 'v'}, '<leader>cc', '"+y', { desc = 'Copy to system clipboard' })
+set({'n'; 'v'}, '<leader>yy', '"+y', { desc = 'Copy to system clipboard' })
 set('i', '<C-v>', '<C-g>u<C-r><C-o>+')
+set('i', '<leader>e', vim.diagnostic.open_float)
 set('n', 'gh', ':nohl<CR>')
 set('v', '<leader>rs', ':s/')
 set('n', '<leader>rf', ':%s/')
@@ -22,6 +23,9 @@ set('n', '<leader>vs', ':vsplit<CR>')
 -- file explorers
 set('n', '<leader>fe', ':Oil<CR>')
 
+set('n', '<leader>ff', ':FzfLua files<CR>')
+set('n', '<leader>fg', ':FzfLua live_grep<CR><C-g>')
+
 -- buffers
 set('n', '<Tab>', ':bnext<CR>')
 set('n', '<S-Tab>', ':bprev<CR>')
@@ -30,12 +34,6 @@ set('n', '<C-h>', '<C-w>h')
 set('n', '<C-j>', '<C-w>j')
 set('n', '<C-k>', '<C-w>k')
 set('n', '<C-l>', '<C-w>l')
-
--- terminal
-set('t', '<C-h>', [[<C-\><C-N><C-w>h]])
-set('t', '<C-j>', [[<C-\><C-N><C-w>j]])
-set('t', '<C-k>', [[<C-\><C-N><C-w>k]])
-set('t', '<C-l>', [[<C-\><C-N><C-w>l]])
 
 set('n', '<leader>vs', ':vsplit<CR>')
 set('n', '<leader>hs', ':split<CR>')
@@ -90,8 +88,6 @@ set('n', '<A-3>', function() harpoon:list():select(3) end)
 set('n', '<A-4>', function() harpoon:list():select(4) end)
 set('n', '<A-5>', function() harpoon:list():select(5) end)
 
-set('n', '<leader>ff', ':FzfLua files<CR>')
-set('n', '<leader>fh', ':FzfLua live_grep<CR><C-g>')
 
 
 
