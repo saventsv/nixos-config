@@ -26,7 +26,8 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"picom", NULL,
-	NULL /* terminate */
+	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers" NULL, 
+  NULL /* terminate */
 };
 
 /* tagging */

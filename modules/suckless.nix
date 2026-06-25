@@ -16,6 +16,7 @@
   environment.systemPackages = with pkgs; [
 
     alacritty # backup
+    feh
 
     (pkgs.st.overrideAttrs (oldAttrs: {
       src = ../dotfiles/st; 
