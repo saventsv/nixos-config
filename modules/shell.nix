@@ -26,6 +26,7 @@
       set -o vi
       export EDITOR=nvim
       export MANPAGER="nvim +Man!"
+      export PATH="/home/saven/.local/bin/:$PATH"
 
       # fzf_cd() {
       #   local dir
