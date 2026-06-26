@@ -30,6 +30,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
 	"picom", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
+	"polybar", NULL,
   NULL /* terminate */
 };
 
@@ -43,7 +44,6 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-  { "quickshell", NULL,     NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
