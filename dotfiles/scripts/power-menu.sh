@@ -10,9 +10,8 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    logout
+    loginctl terminate-session "$XDG_SESSION_ID"
     ;;
   *)
     exit 0
-    ;;
 esac
