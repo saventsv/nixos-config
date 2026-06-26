@@ -10,7 +10,7 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int usealtbar          = 0;        /* 1 means use non-dwm status bar */
+static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Eww"; /* Alternate bar class name */
 static const char *altbarcmd        = "$HOME/nixos-config/dotfiles/eww/bar.sh"; /* Alternate bar launch command */ 
 static const char *fonts[]          = { "Iosevka Term Nerd Font Mono:size=10" };
