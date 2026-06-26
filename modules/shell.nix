@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     fd
     ripgrep
-    fastfetch
+    nitch
     tmux
     wget
     git
