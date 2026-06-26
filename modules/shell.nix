@@ -7,7 +7,7 @@
     tmux
     wget
     git
-    nnn
+    yazi
   ];
 
   programs.fzf = {

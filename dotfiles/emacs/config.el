@@ -43,6 +43,17 @@
  ;; Enable relative line numbering globally across all programming/text modes
  (setq display-line-numbers-type 'relative) 
  (global-display-line-numbers-mode 1)
+ (setq create-lockfiles nil)
+
+(setq backup-directory-alist
+  `(("." . ,(expand-file-name ".garbage/backups/" user-emacs-directory))))
+
+(setq auto-save-file-name-transforms
+  `((".*" ,(expand-file-name ".garbage/auto-saves/" user-emacs-directory) t)))
+
+(setq auto-save-list-file-prefix
+  (expand-file-name ".garbage/auto-save-list/.saves-" user-emacs-directory))
+ 
 
  (menu-bar-mode -1)
 
