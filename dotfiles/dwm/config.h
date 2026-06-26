@@ -87,12 +87,13 @@ static const char *volup[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", 
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
 static const char *wallpapers[] = { "wallpapers", NULL };
+static const char *wifi[] = { "wifi", NULL };
+static const char *bluetooth[] = { "bluetooth", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      movestack,      {.i = -1} },
@@ -108,7 +109,9 @@ static const Key keys[] = {
   { MODKEY,                       XK_v,      spawn,          {.v = volup } },
   { MODKEY|ShiftMask,             XK_v,      spawn,          {.v = voldown } },
   { MODKEY,                       XK_m,      spawn,          {.v = volmute } },
-  { MODKEY,                       XK_w,      spawn,          {.v = wallpapers } },
+  { MODKEY,                       XK_w,      spawn,          {.v = wifi } },
+  { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wallpapers } },
+  { MODKEY,                       XK_b,      spawn,          {.v = wifi } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
