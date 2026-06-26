@@ -86,9 +86,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *volup[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
-static const char *wallpapers[] = { "wallpapers", NULL };
-static const char *wifi[] = { "wifi", NULL };
-static const char *bluetooth[] = { "bluetooth", NULL };
+static const char *wallpapers[] = { "/home/saven/nixos-config/dotfiles/scripts/wallpapers.sh", NULL };
+static const char *wifi[] = { "/home/saven/nixos-config/dotfiles/scripts/wifi.sh", NULL };
+static const char *bluetooth[] = { "/home/saven/nixos-config/dotfiles/scripts/bluetooth.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -111,7 +111,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_m,      spawn,          {.v = volmute } },
   { MODKEY,                       XK_w,      spawn,          {.v = wifi } },
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wallpapers } },
-  { MODKEY,                       XK_b,      spawn,          {.v = wifi } },
+  { MODKEY,                       XK_b,      spawn,          {.v = bluetooth } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
