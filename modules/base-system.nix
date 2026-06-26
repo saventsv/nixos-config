@@ -31,7 +31,7 @@
     xclip
     wl-clipboard
 
-    notify-desktop
+    libnotify
 
     blueman
     bluez
