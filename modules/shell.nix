@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     fd
     ripgrep
-    fastfetch
+    nitch
     tmux
     wget
     yazi
@@ -35,7 +35,7 @@
     shellAliases = {
       ll = "ls -lah";
       grep = "grep --color=auto";
-      emacs = "emacs -nw";
+      ff = "fastfetch";
     };
 
     interactiveShellInit = ''
