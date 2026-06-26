@@ -5,12 +5,12 @@
     "type": "auto"
   },
 
-  "display": {
-    "separator": "  "
+   "display": {
+    "separator": "  "
   },
 
   "modules": [
-    "title",
+    "type": "title",
     "separator",
     "os",
     "kernel",
@@ -22,7 +22,5 @@
     "gpu",
     "memory",
     "disk",
-    "break",
-    "colors"
   ]
 }
