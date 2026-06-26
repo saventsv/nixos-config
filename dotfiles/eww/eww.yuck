@@ -1,26 +1,69 @@
-(defwidget bar []
-  (box
-    :class "bar"
-    :orientation "h"
-    :halign "fill"
-    :hexpand true
+ (defpoll time
+    :interval "1s"
+    "date '+%H:%M'")
 
-    (label
-      :text "Hello from Eww")))
-      
+ (defpoll workspace
+    :interval "0.05s"
+    "dwm-msg get_tags | jq -r --argjson sel \"$(dwm-msg get_monitors | jq '.[0].tag_state.selected')\" ' .[] | select(.bit_mask == $sel) | .name '")
 
-(defwindow bar
-  :monitor 0
-  :geometry (geometry
-    :x "0%"
-    :y "0px"
-    :width "100%"
-    :height "30px"
-    :anchor "top center")
+ (defpoll battery
+    :interval "5s"
+    "upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percent | awk '{print $2}'")
 
-  :stacking "fg"
-  :windowtype "dock"
-  :reserve (struts :side "top" :distance "30px")
-  :wm-ignore false
+ (defwidget clock []
+     (label :text {time}))
 
-  (bar))
+ (defwidget workspace []
+     (label :text {workspace}))
+
+ (defwidget battery []
+     (label :text {battery}))
+
+ (defwidget bar []
+   (box
+     :class "bar"
+     :orientation "h"
+     :halign "fill"
+     :hexpand true
+
+     (box
+       :halign "fill"
+       (box
+         :halign "start"
+         (workspace))
+       )
+
+     (box
+       :halign "fill"
+       (box
+         :halign "center"
+         (clock))
+
+       )
+
+     (box
+       :halign "fill"
+       (box
+         :halign "end"
+         (battery))
+
+       )
+
+
+     ))
+
+ (defwindow bar
+   :monitor 0
+   :geometry (geometry
+     :x "0%"
+     :y "0px"
+     :width "70%"
+     :height "35px"
+     :anchor "top center")
+ 
+   :stacking "fg"
+   :windowtype "dock"
+   :reserve (struts :side "top" :distance "30px")
+   :wm-ignore false
+   (bar))
+

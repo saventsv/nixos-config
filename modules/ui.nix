@@ -3,6 +3,10 @@
   environment.systemPackages = with pkgs; [
     quickshell
     eww
+
+    # depandancies for the bar
+    socat
+    jq
   ];
   
   fonts.packages = with pkgs; [
