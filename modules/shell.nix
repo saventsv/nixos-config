@@ -6,9 +6,23 @@
     nitch
     tmux
     wget
-    git
     yazi
   ];
+
+  programs.git = {
+    enable = true;
+
+    config = {
+      user = {
+        name = "saventsv";
+        email = "saventv@gmail.com";
+      };
+
+      init.defaultBranch = "main";
+      pull.rebase = true;
+      core.editor = "nvim";
+    };
+  };
 
   programs.fzf = {
     keybindings = true;
