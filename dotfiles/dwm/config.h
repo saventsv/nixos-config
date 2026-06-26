@@ -75,15 +75,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL }; */
 static const char *dmenucmd[] = {"dmenu_run", NULL};
-// static const char *termcmd[]  = { "st", NULL };
-static const char *termcmd[] = {
-    "st", "-e", "bash", "-c",
-    "tmux", "new-session",
-    NULL
-};
+static const char *termcmd[]  = { "st", NULL };
 static const char *volup[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-", NULL };
 static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
+static const char *wallpapers[] = { "wallpapers", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -105,6 +101,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_v,      spawn,          {.v = volup } },
   { MODKEY|ShiftMask,             XK_v,      spawn,          {.v = voldown } },
   { MODKEY,                       XK_m,      spawn,          {.v = volmute } },
+  { MODKEY,                       XK_w,      spawn,          {.v = wallpapers } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
