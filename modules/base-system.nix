@@ -21,4 +21,8 @@
     pulse.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    xclip
+  ];
+
 }
