@@ -7,6 +7,7 @@
     tmux
     wget
     git
+    nnn
   ];
 
   programs.fzf = {
@@ -20,6 +21,7 @@
     shellAliases = {
       ll = "ls -lah";
       grep = "grep --color=auto";
+      emacs = "emacs -nw";
     };
 
     interactiveShellInit = ''

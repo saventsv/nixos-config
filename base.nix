@@ -11,6 +11,7 @@
     ./modules/browser.nix
     ./modules/keepassxc.nix
     ./modules/nvim.nix
+    ./modules/emacs.nix
     ./modules/shell.nix
     ./modules/dev.nix
     ./modules/suckless.nix

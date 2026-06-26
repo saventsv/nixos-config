@@ -1,0 +1,118 @@
+#+TITLE: Emacs Configuration for Markdown & Terminal
+#+AUTHOR: Beginner Setup
+
+* Keybindings (Evil Mode)
+
+Since we are coming from Neovim, we implement evil-mode to preserve all Vim muscle memory inside the terminal wrapper.
+
+#+begin_src elisp
+(use-package evil
+  :ensure t
+  :demand t
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  :config
+  (evil-mode 1)
+  (defun my-evil-scroll-down-and-center ()
+    (interactive)
+    (evil-scroll-down nil)
+    (recenter-top-bottom))
+
+  (defun my-evil-scroll-up-and-center ()
+    "Scroll up half a page and center the cursor line."
+    (interactive)
+    (evil-scroll-up nil)
+    (recenter-top-bottom))
+
+  (evil-define-key '(normal visual) 'global (kbd "C-d") 'my-evil-scroll-down-and-center)
+  (evil-define-key '(normal visual) 'global (kbd "C-u") 'my-evil-scroll-up-and-center)))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :demand t
+  :config
+  (evil-collection-init))
+#+end_src
+
+* Markdown Editing & Syntax Optimization
+
+This optimizes 'markdown-mode' for the 'st' terminal emulator. It hides raw markdown markers (like `**`) while typing unless your cursor sits on them, keeping the code clean. Centering and automatic wrapping are omitted.
+
+#+begin_src elisp
+(use-package markdown-mode
+  :ensure t
+  :demand t
+  :mode ("\\.md\\'" . markdown-mode)
+  :init
+  ;; Disable header scaling since the terminal grid does not natively support text resizing
+  (setq markdown-header-scaling nil)
+  
+  ;; Hide raw markup markers (** or _ ) and links until the cursor selects them
+  (setq markdown-hide-markup t)
+  (setq markdown-hide-urls t)
+  
+  :config
+  ;; Custom color styling matching your terminal theme
+  (custom-theme-set-faces
+   'user
+   ;; Gives inline `code` blocks an obvious distinct color background
+   '(markdown-inline-code-face ((t (:background "#2e3440" :foreground "#88c0d0"))))
+   ;; Standard terminal headings will stand out distinctly using Bolding
+   '(markdown-header-face-1 ((t (:weight bold))))
+   '(markdown-header-face-2 ((t (:weight bold))))
+   '(markdown-header-face-3 ((t (:weight bold))))))
+#+end_src
+
+* Global Editor Settings
+
+This section configures universal editor behaviors, including Neovim-style relative line numbering.
+
+#+begin_src elisp
+  (use-package emacs
+    :init
+    ;; Enable relative line numbering globally across all programming/text modes
+    (setq display-line-numbers-type 'relative) 
+    (global-display-line-numbers-mode 1)
+
+
+
+    ;; Optional: Don't show line numbers in terminal dashboard or shell buffers
+    (dolist (mode '(org-agenda-mode-hook
+                    eshell-mode-hook
+                    shell-mode-hook
+                    term-mode-hook))
+      (add-hook mode (lambda () (display-line-numbers-mode 0)))))
+#+end_src
+
+* (Dired)
+
+#+begin_src elisp
+(use-package dired
+  :ensure nil ; Built-in, no download needed
+  :custom
+  ;; Always auto-refresh dired buffers when files change on disk
+  (dired-auto-revert-buffer t)
+  ;; Human-readable file sizes and hide group details to keep it minimal
+  (dired-listing-switches "-agho --group-directories-first")
+  :config
+  ;; Use the '-' key globally to open the file manager at the current file's path
+  (define-key evil-normal-state-map (kbd "-") 
+              (lambda () (interactive) (dired default-directory)))
+  
+  ;; Custom keymaps inside the file explorer buffer
+  (evil-collection-define-key 'normal 'dired-mode-map
+    "-" 'dired-up-directory                ; '-' goes up to parent directory
+    (kbd "RET") 'dired-find-file           ; Enter opens file/folder
+    "i" 'wdired-change-to-wdired-mode))    ; 'i' puts buffer into "writable oil mode"
+
+(use-package wdired
+  :ensure nil ; Built-in
+  :config
+  ;; Custom keymaps when actively rewriting files in Writable mode
+  (evil-collection-define-key 'normal 'wdired-mode-map
+    (kbd "Z Z") 'wdired-finish-edit       ; 'ZZ' saves your filesystem changes
+    (kbd "Z Q") 'wdired-abort-changes))   ; 'ZQ' cancels updates
+#+end_src
