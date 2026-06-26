@@ -15,15 +15,19 @@ static const char *altbarclass      = "Eww"; /* Alternate bar class name */
 static const char *altbarcmd        = "$HOME/nixos-config/dotfiles/eww/s.sh"; /* Alternate bar launch command */ 
 static const char *fonts[]          = { "Iosevka Term Nerd Font Mono:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const char *colors[][3]      = {
+// static const char col_gray1[]       = "#222222";
+// static const char col_gray2[]       = "#444444";
+// static const char col_gray3[]       = "#bbbbbb";
+// static const char col_gray4[]       = "#eeeeee";
+// static const char col_cyan[]        = "#005577";
+static const char col_sel[]         = "#A7C080";
+static const char col_selbg[]       = "#1E2326";
+static const char col_fg[]          = "#D3C6AA";
+static const char col_bg[]          = "#1E2326";
+static const char *colors[][3]    = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, "#1E2326"},
-	[SchemeSel]  = { col_gray4, col_cyan,  "#A7C080"},
+	[SchemeNorm] = { col_fg,    col_bg,   "#1E2326"},
+	[SchemeSel]  = { col_selbg, col_sel,  "#A7C080"},
 };
 #include "movestack.c"
 
