@@ -10,7 +10,7 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    pkill Xorg
+    logout
     ;;
   *)
     exit 0
