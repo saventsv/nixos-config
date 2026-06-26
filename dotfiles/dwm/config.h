@@ -11,8 +11,8 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
-static const char *altbarclass      = "Eww"; /* Alternate bar class name */
-static const char *altbarcmd        = "$HOME/nixos-config/dotfiles/eww/bar.sh"; /* Alternate bar launch command */ 
+static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
+static const char *altbarcmd        = "polybar"; /* Alternate bar launch command */ 
 static const char *fonts[]          = { "Iosevka Term Nerd Font Mono:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
 	"picom", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
-	"polybar", NULL,
+	// "polybar", NULL,
   NULL /* terminate */
 };
 
