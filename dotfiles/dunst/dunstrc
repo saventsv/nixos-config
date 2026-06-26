@@ -1,0 +1,31 @@
+[global]
+monitor = 0
+follow = mouse
+
+width = 300
+origin = top-right
+offset = 10x10
+notification_limit = 5
+
+frame_width = 2
+frame_color = "#5e81ac"
+
+font = Iosevka Term Nerd Font Mono 15
+corner_radius = 8
+
+idle_threshold = 120
+
+[urgency_low]
+background = "#2e3440"
+foreground = "#d8dee9"
+timeout = 4
+
+[urgency_normal]
+background = "#2e3440"
+foreground = "#eceff4"
+timeout = 6
+
+[urgency_critical]
+background = "#bf616a"
+foreground = "#eceff4"
+timeout = 0

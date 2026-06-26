@@ -6,6 +6,9 @@ vim.pack.add({
 
   "https://github.com/neanias/everforest-nvim",
 
+  "https://github.com/bullets-vim/bullets.vim",
+  "https://github.com/OXY2DEV/markview.nvim",
+
   "https://github.com/nvim-lua/plenary.nvim", -- dependancy for harpoon
   {
     src = "https://github.com/ThePrimeagen/harpoon",
@@ -62,6 +65,23 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 require("everforest").setup({
   background = "hard",
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function(event)
+    require("markview").setup({
+      renderers = {
+        markdown = {
+          list_items = {
+            shift_width = vim.o.shiftwidth, -- or 2/4 depending on your style
+            align = true,
+          },
+        },
+      },
+    })
+  end
+})
+
 
 vim.o.background = "dark"
 vim.cmd.colorscheme("everforest")

@@ -31,6 +31,8 @@
     xclip
     wl-clipboard
 
+    notify-desktop
+
     blueman
     bluez
     bluez-tools

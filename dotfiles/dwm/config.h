@@ -90,6 +90,7 @@ static const char *wallpapers[] = { "/home/saven/nixos-config/dotfiles/scripts/w
 static const char *wifi[] = { "/home/saven/nixos-config/dotfiles/scripts/wifi.sh", NULL };
 static const char *bluetooth[] = { "/home/saven/nixos-config/dotfiles/scripts/bluetooth.sh", NULL };
 static const char *power_menu[] = { "/home/saven/nixos-config/dotfiles/scripts/power-menu.sh", NULL };
+static const char *screenshot[] = { "flameshot", "gui",NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -114,6 +115,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wallpapers } },
   { MODKEY,                       XK_b,      spawn,          {.v = bluetooth } },
   { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = power_menu } },
+  { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = screenshot } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },

@@ -13,6 +13,10 @@
       "rev": "5876dd95deeb70aadbe9f1c0b7117a135061cdac",
       "src": "https://github.com/Saghen/blink.lib"
     },
+    "bullets.vim": {
+      "rev": "3f667eeca58bd4ba411b41edefef51e7fed1a2b1",
+      "src": "https://github.com/bullets-vim/bullets.vim"
+    },
     "cmp-buffer": {
       "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "https://github.com/hrsh7th/cmp-buffer"
@@ -41,6 +45,10 @@
       "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
       "src": "https://github.com/ThePrimeagen/harpoon",
       "version": "'harpoon2'"
+    },
+    "markview.nvim": {
+      "rev": "301e431c7b618235f5447d54465c70934bd33668",
+      "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mini.surround": {
       "rev": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18",
