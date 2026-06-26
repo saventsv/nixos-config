@@ -1,6 +1,12 @@
 {pkgs, config, ...}:
 {
   networking.networkmanager.enable = true;
+  services.dbus.enable = true;
+  programs.nm-applet.enable = true;
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   services.syncthing = {
     enable = true;
     user = "saven";
@@ -8,7 +14,6 @@
     configDir = "/home/saven/.config/syncthing";
   };
 
-  hardware.bluetooth.enable = true;
   nixpkgs.config.allowUnfree = true;
   
   services.xserver.enable = true;
@@ -19,10 +24,16 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
     xclip
+    wl-clipboard
+
+    blueman
+    bluez
+    bluez-tools
   ];
 
 }
