@@ -13,7 +13,6 @@
     ./modules/nvim.nix
     ./modules/shell.nix
     ./modules/dev.nix
-    ./modules/suckless.nix
     ./modules/ui.nix
     ./modules/wayland.nix
     ./modules/xorg.nix
