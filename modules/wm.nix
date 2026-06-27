@@ -1,9 +1,9 @@
 {pkgs, config, ...}:
 {
-  services.xserver.windowManager.bspwm.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    sxhkd
+  programs.niri.enable = true;
+  
+  evironment.systemPackages = with pkgs; [
+    fuzzel
   ];
 }
 
