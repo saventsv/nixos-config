@@ -1,18 +1,10 @@
 {pkgs, config, ...}:
 {
-  # services.xserver.displayManager.lightdm = {
-  #   enable = true;
-  #   # greeters.slick = {
-  #   #   enable = true;
-  #   # };
-  #   background = "/etc/lightdm/ferns.jpg";
-  # };
-  # environment.etc."lightdm/ferns.jpg".source = ./wallpapers/ferns.jpg;
-
-  services.displayManager.sddm = {
+  services.xserver.displayManager.lightdm = {
     enable = true;
-    wayland.enable = true;
+    background = "/etc/lightdm/ferns.jpg";
   };
+  environment.etc."lightdm/ferns.jpg".source = ./wallpapers/ferns.jpg;
 }
 
 
