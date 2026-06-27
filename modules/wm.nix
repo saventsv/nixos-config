@@ -2,8 +2,9 @@
 {
   programs.niri.enable = true;
   
-  evironment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     fuzzel
+    swaybg
   ];
 }
 
