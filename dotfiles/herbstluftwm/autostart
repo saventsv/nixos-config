@@ -18,6 +18,23 @@ for i in 1 2 3 4 5 6 7 8 9; do
     hc add "$i"
 done
 
+# layout
+setup_master_stack() {
+    # reset layout
+    hc remove
+
+    # master (left) + stack (right)
+    hc split horizontal 0.50
+
+    # stack split vertically
+    hc focus right
+    hc split vertical 0.5
+
+    hc focus left
+}
+
+setup_master_stack
+
 # keybinds (NO sxhkd needed)
 Mod=Mod4
 

@@ -1,5 +1,9 @@
 {pkgs, config, ...}:
 {
-  services.xserver.windowManager.herbstluftwm.enable = true;
+  services.xserver.windowManager.bspwm.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    sxhkd
+  ];
 }
 
