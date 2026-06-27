@@ -1,5 +1,5 @@
 {pkgs, config, ...}:
 {
-  services.xserver.windowManager.bspwm.enable = true;
+  services.xserver.windowManager.herbstluftwm.enable = true;
 }
 

@@ -1,0 +1,63 @@
+#!/bin/sh
+
+hc() {
+    herbstclient "$@"
+}
+
+# basic settings
+hc emit_hook reload
+
+hc set frame_border_width 2
+hc set window_gap 8
+
+hc set frame_border_active_color '#5e81ac'
+hc set frame_border_normal_color '#3b4252'
+
+# create tags (workspaces)
+for i in 1 2 3 4 5 6 7 8 9; do
+    hc add "$i"
+done
+
+# keybinds (NO sxhkd needed)
+Mod=Mod4
+
+hc keybind "$Mod-Return" spawn st
+hc keybind "$Mod-d" spawn dmenu_run
+hc keybind "$Mod-q" close
+hc keybind "$Mod-Shift-q" quit
+hc keybind "$Mod-r" reload
+
+# focus movement
+hc keybind "$Mod-h" focus left
+hc keybind "$Mod-j" focus down
+hc keybind "$Mod-k" focus up
+hc keybind "$Mod-l" focus right
+
+# move windows
+hc keybind "$Mod-Shift-h" shift left
+hc keybind "$Mod-Shift-j" shift down
+hc keybind "$Mod-Shift-k" shift up
+hc keybind "$Mod-Shift-l" shift right
+
+# switch tags
+hc keybind "$Mod-1" use 1
+hc keybind "$Mod-2" use 2
+hc keybind "$Mod-3" use 3
+hc keybind "$Mod-4" use 4
+hc keybind "$Mod-5" use 5
+hc keybind "$Mod-5" use 6
+hc keybind "$Mod-5" use 7
+hc keybind "$Mod-5" use 8
+hc keybind "$Mod-5" use 9
+
+# layout
+hc keybind "$Mod-space" cycle_layout 1
+
+# start panel (optional)
+# polybar example:
+# polybar &
+
+# restart programs on reload
+picom &
+polybar &
+feh --bg-fill --randomize /home/saven/Pictures/wallpapers &
