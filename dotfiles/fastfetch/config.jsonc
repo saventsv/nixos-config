@@ -10,7 +10,7 @@
   },
 
   "modules": [
-    "type": "title",
+    "title",
     "separator",
     "os",
     "kernel",
@@ -22,5 +22,5 @@
     "gpu",
     "memory",
     "disk",
-  ]
+  ],
 }

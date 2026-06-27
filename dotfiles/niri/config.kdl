@@ -1,4 +1,4 @@
-spawn-at-startup "swaybg -i ~/Pictures/wallpapers/ferns.jpg"
+spawn-at-startup "swaybg" "-i" "/home/saven/Pictures/wallpapers/ferns.jpg" "-m" "fill"
 
 input {
     keyboard {
@@ -26,14 +26,15 @@ layout {
     }
 
     preset-column-widths {
-      proportion 1.0
       proportion 0.5
+      proportion 1.0
     }
 }
 
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
+    open-maximized true
 }
 
 binds {

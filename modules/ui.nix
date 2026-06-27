@@ -1,13 +1,8 @@
 {pkgs, config, ...}:
 {
   environment.systemPackages = with pkgs; [
-    quickshell
-    eww
     polybar
-
-    # depandancies for the bar
-    socat
-    jq
+    ags
   ];
   
   fonts.packages = with pkgs; [

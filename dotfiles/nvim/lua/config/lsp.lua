@@ -28,10 +28,11 @@ vim.lsp.config("pyright", {
 vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
+
 vim.lsp.config("qmlls", {
   cmd = { "qmlls", "-E" },
   filetypes = { "qml" },
-  -- capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 vim.lsp.enable({
