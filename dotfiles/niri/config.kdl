@@ -1,3 +1,5 @@
+spawn-at-startup "swaybg -i ~/Pictures/wallpapers/ferns.jpg"
+
 input {
     keyboard {
         xkb {
@@ -70,6 +72,16 @@ binds {
     Mod+Shift+L { move-column-right; }
     Mod+Shift+J { move-window-down; }
     Mod+Shift+K { move-window-up; }
+
+    Mod+Ctrl+H  { focus-monitor-left; }
+    Mod+Ctrl+L { focus-monitor-right; }
+    Mod+Ctrl+K    { focus-monitor-up; }
+    Mod+Ctrl+J  { focus-monitor-down; }
+
+    Mod+Ctrl+Shift+Left  { move-column-to-monitor-left; }
+    Mod+Ctrl+Shift+Right { move-column-to-monitor-right; }
+    Mod+Ctrl+Shift+Up    { move-column-to-monitor-up; }
+    Mod+Ctrl+Shift+Down  { move-column-to-monitor-down; }
 
     Mod+M { switch-preset-column-width; }
 }
