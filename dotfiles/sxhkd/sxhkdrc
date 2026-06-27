@@ -1,0 +1,39 @@
+# terminal
+super + Return
+    st
+
+# app launcher
+super + d
+    dmenu_run
+
+# close window
+super + q
+    bspc node -c
+
+# quit wm
+super + shift + q
+    bspc quit
+
+# reload sxhkd
+super + shift + r
+    pkill -USR1 -x sxhkd
+
+# focus
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+# move windows
+super + shift + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+# desktop switching
+super + {1-9}
+    bspc desktop -f '^{1-9}'
+
+# send window to desktop
+super + shift + {1-9}
+    bspc node -d '^{1-9}'
+
+# toggle floating
+super + space
+    bspc node -t floating
