@@ -7,7 +7,6 @@
     ../../modules/backup.nix
     ../../modules/work.nix
     ../../modules/battery.nix
-    ../../modules/wm.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
