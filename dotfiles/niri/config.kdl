@@ -92,5 +92,9 @@ binds {
     Mod+Ctrl+Shift+Up    { move-column-to-monitor-up; }
     Mod+Ctrl+Shift+Down  { move-column-to-monitor-down; }
 
+    Mod+V {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
+    Mod+Shift+V {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
+
+
     Mod+M { switch-preset-column-width; }
 }

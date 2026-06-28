@@ -13,6 +13,7 @@
     bash-language-server
     jdt-language-server
     clang-tools
+    elixir-ls
 
 
     # quickshell lsp
@@ -28,6 +29,7 @@
       p.nix
       p.bash
       p.java
+      p.elixir
       p.qmljs
     ]))
   ];
