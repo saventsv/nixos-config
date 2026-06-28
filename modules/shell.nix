@@ -35,6 +35,7 @@
     shellAliases = {
       ll = "ls -lah";
       grep = "grep --color=auto";
+      nvim-test = "nvim -u ~/nixos-config/dotfiles/alt-nvim/init.lua";
       ff = "fastfetch";
     };
 
