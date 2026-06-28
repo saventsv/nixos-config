@@ -31,8 +31,6 @@
     xclip
     wl-clipboard
 
-    fsel
-
     libnotify
 
     blueman

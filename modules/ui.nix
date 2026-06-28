@@ -4,6 +4,7 @@
     polybar
     waybar
     ags
+    quickshell
   ];
   
   fonts.packages = with pkgs; [
