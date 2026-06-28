@@ -29,6 +29,11 @@ vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
 
+vim.lsp.config("elixirls", {
+  cmd = { "elixir-ls" },
+  capabilities = capabilities,
+})
+
 -- vim.lsp.config("qmlls", {
 --   cmd = { "qmlls", "-E" },
 --   filetypes = { "qml" },
@@ -37,6 +42,7 @@ vim.lsp.config("jdtls", {
 
 vim.lsp.enable({
   "lua_ls",
+  "elixirls",
   "gopls",
   "nixd",
   "bashls",
