@@ -30,6 +30,7 @@
       p.bash
       p.java
       p.elixir
+      p.erlang
       p.qmljs
     ]))
   ];
