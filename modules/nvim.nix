@@ -21,18 +21,26 @@
     qt6.qttools
 
     # tree-sitter parsers
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
-      p.go
-      p.lua
-      p.c
-      p.python
-      p.nix
-      p.bash
-      p.java
-      p.elixir
-      p.erlang
-      p.qmljs
-    ]))
+    # trying to have nvim handle the parsers
+    # (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
+    #   p.lua
+    #   p.go
+    #   p.nix
+    #   p.elixir
+    #   p.erlang
+    #   p.c
+    #   p.python
+    #   p.bash
+    #   p.java
+    #   p.qmljs
+    # ]))
   ];
 
+  programs.neovim = {
+    defaultEditor = true;
+
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter
+    ];
+  };
 }

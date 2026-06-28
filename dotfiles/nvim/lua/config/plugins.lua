@@ -84,6 +84,8 @@ vim.api.nvim_create_autocmd("FileType", {
     if not ok then return end
     ts.setup({
       highlight = { enable = true },
+      auto_install = true,
+      ensure_installed = {},
     })
   end,
 })
