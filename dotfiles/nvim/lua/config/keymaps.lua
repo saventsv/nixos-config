@@ -18,6 +18,7 @@ set('n', '<leader>rl', ':s/')
 set('n', '<leader>rw', [[:s/\<<C-r><C-w>\>//g<Left><Left>]])
 set('n', '<leader>hs', ':split<CR>')
 set('n', '<leader>vs', ':vsplit<CR>')
+set('n', '<leader>tw', ':set wrap!<CR>', { buffer = true })
 
 
 -- file explorers

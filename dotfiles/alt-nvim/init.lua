@@ -43,7 +43,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-require("config.plugins")
+require("config.lazy")
 require("config.keymaps")
 require("config.lsp")
 require("config.cmp")
+
+vim.o.background = "dark"
+vim.cmd.colorscheme("everforest")
+
