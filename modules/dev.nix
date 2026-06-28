@@ -10,6 +10,7 @@
     elixir
     erlang
     rebar3
+    cargo
   ];
   programs.java.enable = true;
 }
