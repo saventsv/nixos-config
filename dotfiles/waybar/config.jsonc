@@ -1,0 +1,41 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery"],
+
+  // -------------------------
+  // Niri Workspaces
+  // -------------------------
+  "niri/workspaces": {
+    "format": "{index}",
+    "disable-click": false,
+    "all-outputs": false,
+  },
+
+  // -------------------------
+  // Clock (12-hour format)
+  // -------------------------
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "{:%A, %B %d %Y}"
+  },
+
+  // -------------------------
+  // Battery
+  // -------------------------
+  "battery": {
+    "interval": 30,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  }
+}

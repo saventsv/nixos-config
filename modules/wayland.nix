@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     fuzzel
     swaybg
+    hyprshot
     rofi
     alacritty
     rofi-bluetooth

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 choice=$(printf "Turn Wi-Fi On\nTurn Wi-Fi Off\nScan & Connect\nCurrent Connection\nQuit" | rofi -dmenu -i -p "WiFi")
 
 case "$choice" in
