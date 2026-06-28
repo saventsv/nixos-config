@@ -8,8 +8,6 @@
     hyprshot
     rofi
     alacritty
-    rofi-bluetooth
-    rofi-network-manager
   ];
 }
 

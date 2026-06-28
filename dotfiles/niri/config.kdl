@@ -38,11 +38,18 @@ window-rule {
     open-maximized true
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 binds {
     Mod+Return { spawn "alacritty"; }
     Alt+Space { spawn-sh "rofi -show drun"; }
 
+    Mod+Shift+P { spawn-sh "hyprshot -zs"; }
+
     Mod+Q { close-window; }
+    Mod+Shift+Q { spawn-sh "systemctl poweroff"; }
     Mod+Shift+E { quit; }
 
     Mod+H { focus-column-left; }

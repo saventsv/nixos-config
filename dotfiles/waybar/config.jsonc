@@ -5,7 +5,7 @@
 
   "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["battery"],
+  "modules-right": ["tray", "battery"],
 
   // -------------------------
   // Niri Workspaces
@@ -34,8 +34,20 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-charging": "  {capacity}% {icon}",
+    "format-plugged": " {capacity}% {icon}",
     "format-icons": ["", "", "", "", ""]
-  }
+  },
+
+  // -------------------------
+  // System Tray
+  // -------------------------
+  "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+  },
 }

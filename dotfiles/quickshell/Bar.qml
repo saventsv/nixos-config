@@ -1,18 +1,22 @@
-// Bar.qml
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import "widgets"
+import "popups"
 
 Scope {
   id: root
   property string time
 
-  Variants {
-    model: Quickshell.screens
+  // Variants {
+  //   model: Quickshell.screens
 
     PanelWindow {
+      id: panel
       required property var modelData
       screen: modelData
+
+      color: "red"
 
       anchors {
         top: true
@@ -22,27 +26,27 @@ Scope {
 
       implicitHeight: 30
 
-      Text {
+      ClockWidget {
         anchors.centerIn: parent
-        text: root.time
+      }
+
+      BatteryWidget {
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.margins: 10
+      }
+
+      WifiPopup {
+        id: wifiPopup
+        panel: panel    
+      }
+
+      WifiWidget {
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.margins: 10
+        popup: wifiPopup
       }
     }
-  }
-
-  Process {
-    id: dateProc
-    command: ["date"]
-    running: true
-
-    stdout: StdioCollector {
-      onStreamFinished: root.time = this.text
-    }
-  }
-
-  Timer {
-    interval: 1000
-    running: true
-    repeat: true
-    onTriggered: dateProc.running = true
-  }
+  // }
 }
