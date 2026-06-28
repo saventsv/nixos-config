@@ -7,6 +7,9 @@
     maven
     python3
     nodejs
+    elixir
+    erlang
+    rebar3
   ];
   programs.java.enable = true;
 }

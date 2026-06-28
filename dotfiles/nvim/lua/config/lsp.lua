@@ -29,19 +29,19 @@ vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
 
-vim.lsp.config("qmlls", {
-  cmd = { "qmlls", "-E" },
-  filetypes = { "qml" },
-  capabilities = capabilities,
-})
+-- vim.lsp.config("qmlls", {
+--   cmd = { "qmlls", "-E" },
+--   filetypes = { "qml" },
+--   capabilities = capabilities,
+-- })
 
 vim.lsp.enable({
-  "gopls",
-  "qmlls",
   "lua_ls",
-  "clangd",
-  "bashls",
+  "gopls",
   "nixd",
+  "bashls",
+  -- "qmlls",
+  "clangd",
   "pyright",
   "jdtls",
 })
