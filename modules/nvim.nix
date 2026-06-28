@@ -20,6 +20,8 @@
     qt6.qtdeclarative   
     qt6.qttools
 
+    tree-sitter
+
     # tree-sitter parsers
     # trying to have nvim handle the parsers
     # (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
@@ -35,12 +37,4 @@
     #   p.qmljs
     # ]))
   ];
-
-  programs.neovim = {
-    defaultEditor = true;
-
-    plugins = with pkgs.vimPlugins; [
-      nvim-treesitter
-    ];
-  };
 }
