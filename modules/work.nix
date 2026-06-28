@@ -2,6 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     zoom-us
+    discord
   ];
-  programs.discord.enable = true;
-}
+} 
