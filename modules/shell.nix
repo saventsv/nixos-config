@@ -68,7 +68,7 @@
 
       # bind -x '"\C-f": fzf_cd'
       bind '"\C-f": "\C-ufzf_cd\C-m"'
-      bind -x '"\C-n": n'
+      bind -x '"\C-n": nvim'
 
       bind '"\C-l": clear-screen'
       shopt -s cdspell
