@@ -1,14 +1,15 @@
 {pkgs, config, ...}:
 {
+  services.power-profiles-daemon.enable = false;
   services.upower.enable = true;
   services.logind = {
     enable = true;
 
-    extraConfig = ''
-      HandleLidSwitch=suspend
-      HandleLidSwitchExternalPower=suspend
-      HandleLidSwitchDocked=ignore
-    '';
+    settings.Login = {
+  HandleLidSwitch = "suspend";
+  HandleLidSwitchExternalPower = "suspend";
+  HandleLidSwitchDocked = "ignore";
+    };
   };
   services.tlp = {
     enable = true;

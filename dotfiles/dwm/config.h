@@ -33,7 +33,7 @@ static const char *colors[][3]    = {
 
 static const char *const autostart[] = {
 	"picom", NULL,
-	"polybar", NULL,
+	// "polybar", NULL,
 	"nm-applet", NULL,
 	"blueman-applet", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
@@ -133,7 +133,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
