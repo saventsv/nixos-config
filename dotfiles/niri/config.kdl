@@ -51,7 +51,7 @@ binds {
     Mod+Q { close-window; }
     Mod+Shift+E { spawn-sh "systemctl poweroff"; }
     Mod+Shift+Q { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/power-menu-wayland.sh"; }
-    Mod+B { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/bluetooth-wayland.sh"; }
+    Mod+C { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/bluetooth-wayland.sh"; }
     Mod+W { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/wifi-wayland.sh"; }
 
     Mod+H { focus-column-left; }
@@ -97,6 +97,8 @@ binds {
     Mod+V {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
     Mod+Shift+V {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
 
+    Mod+B {spawn-sh "brightnessctl set +10%"; }
+    Mod+Shift+B {spawn-sh "brightnessctl set 10%-"; }
 
     Mod+S { switch-preset-column-width; }
 }
