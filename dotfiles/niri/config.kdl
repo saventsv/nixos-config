@@ -49,8 +49,10 @@ binds {
     Mod+Shift+P { spawn-sh "hyprshot -zs"; }
 
     Mod+Q { close-window; }
-    Mod+Shift+Q { spawn-sh "systemctl poweroff"; }
-    Mod+Shift+E { quit; }
+    Mod+Shift+E { spawn-sh "systemctl poweroff"; }
+    Mod+Shift+Q { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/power-menu-wayland.sh"; }
+    Mod+B { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/bluetooth-wayland.sh"; }
+    Mod+W { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/wifi-wayland.sh"; }
 
     Mod+H { focus-column-left; }
     Mod+L { focus-column-right; }
