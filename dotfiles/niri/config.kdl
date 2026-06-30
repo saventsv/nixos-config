@@ -98,5 +98,5 @@ binds {
     Mod+Shift+V {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
 
 
-    Mod+M { switch-preset-column-width; }
+    Mod+S { switch-preset-column-width; }
 }
