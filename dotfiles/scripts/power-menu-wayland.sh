@@ -10,7 +10,7 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    loginctl terminate-session "$XDG_SESSION_ID"
+    niri msg action quit
     ;;
   *)
     exit 0

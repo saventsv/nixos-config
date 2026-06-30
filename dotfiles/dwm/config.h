@@ -116,7 +116,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_w,      spawn,          {.v = wifi } },
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wallpapers } },
   { MODKEY,                       XK_c,      spawn,          {.v = bluetooth } },
-  { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = power_menu } },
+  { MODKEY|ShiftMask,             XK_q,      spawn,          {.v = power_menu } },
   { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = screenshot } },
   { MODKEY,                       XK_b,      spawn,          {.v = brightnessup } },
   { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = brightnessdown } },
@@ -133,7 +133,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };
 
 /* button definitions */
