@@ -31,6 +31,9 @@ vim.lsp.config("gopls", {
 vim.lsp.config("clangd", {
   capabilities = capabilities,
 })
+vim.lsp.config("ts_ls", {
+  capabilities = capabilities,
+})
 vim.lsp.config("bashls", {
   capabilities = capabilities,
 })
@@ -58,6 +61,7 @@ vim.lsp.config("elixirls", {
     "lua_ls",
     "elixirls",
     "gopls",
+    "ts_ls",
     "nixd",
     "bashls",
     -- "qmlls",
