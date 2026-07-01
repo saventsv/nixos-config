@@ -5,10 +5,11 @@ local on_attach = function(_, bufnr)
     vim.cmd("vsplit")
     vim.lsp.buf.definition()
   end, opts)
+
   vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-  -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 end
 
 
@@ -21,33 +22,42 @@ vim.lsp.config("lua_ls", {
       diagnostics = { globals = { "vim" } },
     },
   },
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 
 
 vim.lsp.config("gopls", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("clangd", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("ts_ls", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("bashls", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("nixd", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("pyright", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 vim.lsp.config("jdtls", {
+  on_attach = on_attach,
   capabilities = capabilities,
 })
 
 vim.lsp.config("elixirls", {
+  on_attach = on_attach,
   cmd = { "elixir-ls" },
 })
 

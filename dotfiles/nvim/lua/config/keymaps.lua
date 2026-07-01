@@ -90,6 +90,3 @@ set('n', '<A-3>', function() harpoon:list():select(3) end)
 set('n', '<A-4>', function() harpoon:list():select(4) end)
 set('n', '<A-5>', function() harpoon:list():select(5) end)
 
-
-
-

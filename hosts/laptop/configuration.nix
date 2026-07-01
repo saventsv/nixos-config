@@ -8,6 +8,7 @@
     ../../modules/work.nix
     ../../modules/battery.nix
     ../../modules/brightness.nix
+    ../../modules/game-dev.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

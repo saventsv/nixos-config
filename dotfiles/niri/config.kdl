@@ -46,7 +46,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Alt+Space { spawn-sh "rofi -show drun"; }
 
-    Mod+Shift+P { spawn-sh "hyprshot -zs"; }
+    Mod+Shift+P { spawn-sh "hyprshot -m region --freeze"; }
 
     Mod+Q { close-window; }
     Mod+Shift+E { spawn-sh "systemctl poweroff"; }
