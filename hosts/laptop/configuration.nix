@@ -6,7 +6,6 @@
     ../../base.nix
     ../../modules/backup.nix
     ../../modules/work.nix
-    ../../modules/wm.nix
     ../../modules/battery.nix
     ../../modules/brightness.nix
     ../../modules/game-dev.nix

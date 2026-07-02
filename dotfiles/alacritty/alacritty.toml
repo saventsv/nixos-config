@@ -5,7 +5,7 @@ decorations = "None"
 
 [font]
 normal = { family = "Iosevka Term Nerd Font Mono", style = "Regular" }
-size = 11.5
+size = 9.5
 
 [scrolling]
 history = 10000

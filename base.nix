@@ -15,7 +15,8 @@
     ./modules/shell.nix
     ./modules/dev.nix
     ./modules/ui.nix
-    ./modules/wayland.nix
+    # ./modules/niri.nix
     ./modules/xorg.nix
+    ./modules/xmonad.nix
   ];
 }
