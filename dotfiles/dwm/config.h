@@ -91,8 +91,8 @@ static const char *wifi[] = { "/home/saven/nixos-config/dotfiles/scripts/wifi.sh
 static const char *bluetooth[] = { "/home/saven/nixos-config/dotfiles/scripts/bluetooth.sh", NULL };
 static const char *power_menu[] = { "/home/saven/nixos-config/dotfiles/scripts/power-menu.sh", NULL };
 static const char *screenshot[] = { "flameshot", "gui",NULL };
-static const char *brightnessup[] = { "brightnessctl", "set","+10%" ,NULL };
-static const char *brightnessdown[] = { "brightnessctl", "set","10%-" ,NULL };
+static const char *brightnessup[] = { "brightnessctl", "set","+5%" ,NULL };
+static const char *brightnessdown[] = { "brightnessctl", "set","5%-" ,NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
