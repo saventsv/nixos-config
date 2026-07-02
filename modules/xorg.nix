@@ -17,6 +17,7 @@
     picom
     flameshot
     alacritty # backup
+    rofi
     feh
 
     (pkgs.st.overrideAttrs (oldAttrs: {

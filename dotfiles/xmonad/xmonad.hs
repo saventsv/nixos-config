@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Util.EZConfig (additionalKeysP, removeKeysP)
 import XMonad.Layout.Spacing
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.InsertPosition
 import XMonad.Util.SpawnOnce
 import XMonad.Actions.Submap
 import XMonad.Hooks.EwmhDesktops
@@ -12,6 +13,7 @@ import qualified Data.Map as M
 
 
 myLayoutHook = avoidStruts $ spacingWithEdge 3 $ Full
+myManageHook = insertPosition End Newer <+> manageDocks <+> manageHook def
 
 myKeys = 
  [ ("M-<Return>", spawn "alacritty") 
@@ -50,7 +52,7 @@ main = xmonad $ ewmh $ docks def
   , normalBorderColor = "#1E2326"
   , focusedBorderColor = "#A7C080"
   , layoutHook = myLayoutHook
-  , manageHook = manageDocks <+> manageHook def
+  , manageHook = myManageHook
   , startupHook = myStartupHook
   }
   `removeKeysP`
