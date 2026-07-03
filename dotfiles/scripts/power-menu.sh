@@ -10,7 +10,8 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    loginctl terminate-session "$XDG_SESSION_ID"
+    # loginctl terminate-session "$XDG_SESSION_ID"
+    pkill -KILL -u "$USER" 
     ;;
   *)
     exit 0
