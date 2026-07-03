@@ -6,6 +6,7 @@
     ../../base.nix
     ../../modules/backup.nix
     ../../modules/work.nix
+    ../../modules/kde.nix
     ../../modules/printing.nix
     ../../modules/battery.nix
     ../../modules/brightness.nix
