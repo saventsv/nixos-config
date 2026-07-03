@@ -30,6 +30,9 @@ vim.pack.add({
   "https://github.com/saadparwaiz1/cmp_luasnip",
 
   "https://github.com/stevearc/oil.nvim",
+
+  -- Git
+  "https://github.com/lewis6991/gitsigns.nvim",
 })
 
 
