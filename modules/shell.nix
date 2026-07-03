@@ -7,6 +7,7 @@
     tmux
     wget
     yazi
+    btop
   ];
 
   programs.git = {

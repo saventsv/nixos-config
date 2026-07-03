@@ -80,6 +80,7 @@ myStartupHook = do
   spawnOnce "picom"
   spawnOnce "polybar"
   spawnOnce "feh --bg-fill --randomize /home/saven/Pictures/wallpapers"
+  spawnOnce "firefox"
 
 main = xmonad $ ewmh $ docks def 
   { modMask = mod4Mask
