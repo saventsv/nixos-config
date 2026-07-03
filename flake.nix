@@ -8,14 +8,16 @@
 
   outputs = { self, nixpkgs, ... }:
   {
-    nixpkgs.config.permittedInsecurePackages = [
-      "pnpm-10.29.2"
-    ];
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       modules = [
         ./hosts/laptop/configuration.nix
+        {
+          nixpkgs.config.permittedInsecurePackages = [
+            "pnpm-10.29.2"
+          ];
+        }
       ];
     };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
@@ -23,6 +25,11 @@
 
       modules = [
         ./hosts/desktop/configuration.nix
+        {
+          nixpkgs.config.permittedInsecurePackages = [
+            "pnpm-10.29.2"
+          ];
+        }
       ];
     };
   };
