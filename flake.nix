@@ -16,16 +16,6 @@
 
       modules = [
         ./hosts/laptop/configuration.nix
-        
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-
-            users.saven = import ./home.nix;
-          };
-        }
       ];
     };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
@@ -33,16 +23,6 @@
 
       modules = [
         ./hosts/desktop/configuration.nix
-
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-
-            users.saven = import ./home.nix;
-          };
-        }
       ];
     };
   };
