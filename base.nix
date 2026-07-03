@@ -2,9 +2,14 @@
 {
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 14d";
+    dates = "daily";
+    options = "--delete-older-than 7d";
   };
+
+  boot.loader.systemd-boot.configurationLimit = 10;
+
+  nix.settings.auto-optimise-store = true;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [
     ./modules/base-system.nix
