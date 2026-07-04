@@ -90,3 +90,8 @@ set('n', '<A-3>', function() harpoon:list():select(3) end)
 set('n', '<A-4>', function() harpoon:list():select(4) end)
 set('n', '<A-5>', function() harpoon:list():select(5) end)
 
+-- Ariel
+vim.keymap.set("n", "<leader>at", "<cmd>AerialToggle!<CR>")
+
+vim.keymap.set("n", "]a", "<cmd>AerialNext<CR>", { desc = "Next symbol" })
+vim.keymap.set("n", "[a", "<cmd>AerialPrev<CR>", { desc = "Previous symbol" })

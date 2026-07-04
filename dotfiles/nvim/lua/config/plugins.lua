@@ -1,6 +1,7 @@
 vim.pack.add({
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.surround",
+  "https://github.com/stevearc/aerial.nvim",
 
   "https://github.com/wakatime/vim-wakatime",
 
@@ -65,6 +66,24 @@ vim.api.nvim_create_autocmd("InsertEnter", {
     local autopairs = require("nvim-autopairs")
     autopairs.setup({})
   end,
+})
+
+require("aerial").setup({
+    layout = {
+        min_width = 30,
+        default_direction = "right",
+    },
+
+    attach_mode = "window",
+
+    show_guides = true,
+
+    filter_kind = false,
+
+    close_automatic_events = {
+        "unsupported",
+        "unfocus",
+    },
 })
 
 
