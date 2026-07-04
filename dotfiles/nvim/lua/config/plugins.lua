@@ -1,7 +1,6 @@
 vim.pack.add({
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.surround",
-  "https://github.com/stevearc/aerial.nvim",
 
   "https://github.com/wakatime/vim-wakatime",
 
