@@ -67,25 +67,6 @@ vim.api.nvim_create_autocmd("InsertEnter", {
   end,
 })
 
-require("aerial").setup({
-    layout = {
-        min_width = 30,
-        default_direction = "right",
-    },
-
-    attach_mode = "window",
-
-    show_guides = true,
-
-    filter_kind = false,
-
-    close_automatic_events = {
-        "unsupported",
-        "unfocus",
-    },
-})
-
-
 require("everforest").setup({
   background = "hard",
 })
