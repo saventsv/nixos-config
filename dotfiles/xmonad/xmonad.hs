@@ -39,9 +39,9 @@ centerFloat =
 --     Tall 1 (3/100) (1/2)
 
 myLayoutHook =
-    toggleLayouts (Tall 1 (3/100) (1/2)) $
     avoidStruts $
     spacingWithEdge 3 $
+    toggleLayouts (Tall 1 (3/100) (1/2)) $
     Full
     
 
