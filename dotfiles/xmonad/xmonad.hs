@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.ManageHook
 import XMonad.Layout.MultiToggle
+import XMonad.Layout.ToggleLayouts
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Util.EZConfig (additionalKeysP, removeKeysP)
 import XMonad.Layout.Spacing
@@ -27,12 +28,22 @@ centerFloat =
 
 
 -- myLayoutHook = avoidStruts $ spacingWithEdge 5 $ Full
+-- myLayoutHook =
+--     avoidStruts $
+--     spacingWithEdge 3 $
+--     mkToggle (single FULL) $ Full ||| Tall 1 (3/100) (1/2)
+-- myLayoutHook =
+--     toggleLayouts Full $
+--     avoidStruts $
+--     spacingWithEdge 3 $
+--     Tall 1 (3/100) (1/2)
+
 myLayoutHook =
+    toggleLayouts (Tall 1 (3/100) (1/2)) $
     avoidStruts $
     spacingWithEdge 3 $
-    mkToggle (single FULL) $
     Full
-    ||| Tall 1 (3/100) (1/2)
+    
 
 myManageHook = insertPosition Below Newer <+> manageDocks <+> manageHook def
 myScratchpads :: [NamedScratchpad]
@@ -60,6 +71,8 @@ myKeys =
  , ("M-C-l", nextScreen) 
  , ("M-C-h", prevScreen) 
  , ("M-q", kill) 
+ -- , ("M-t", sendMessage $ Toggle FULL)
+ , ("M-t", sendMessage ToggleLayout)
  , ("M-S-q", spawn "/home/saven/nixos-config/dotfiles/scripts/power-menu.sh") 
  , ("M-<Space>", 
       submap. M.fromList $
@@ -67,7 +80,7 @@ myKeys =
       , ((0, xK_p), namedScratchpadAction myScratchpads "passwords")
       , ((0, xK_d), namedScratchpadAction myScratchpads "discord")
       , ((0, xK_s), spawn "flameshot gui")
-      , ((0, xK_t), sendMessage $ Toggle FULL)
+      -- , ((0, xK_t), sendMessage $ Toggle FULL)
       , ((0, xK_w), spawn "/home/saven/nixos-config/dotfiles/scripts/wifi.sh")
       , ((0, xK_b), spawn "/home/saven/nixos-config/dotfiles/scripts/wallpapers.sh")
       ]
