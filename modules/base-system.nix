@@ -34,7 +34,7 @@
 
     libnotify
 
-    blueman
+    bluetui
     bluez
     bluez-tools
   ];
