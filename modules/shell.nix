@@ -37,6 +37,7 @@
       ll = "ls -lah";
       grep = "grep --color=auto";
       ff = "fastfetch";
+      nd = "nix develop";
     };
 
     interactiveShellInit = ''
