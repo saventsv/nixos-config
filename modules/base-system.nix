@@ -6,7 +6,7 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-  services.redshift.enable = true;
+  services.gammastep.enable = true;
 
   services.syncthing = {
     enable = true;
