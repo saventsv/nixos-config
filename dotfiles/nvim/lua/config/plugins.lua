@@ -1,4 +1,5 @@
 vim.pack.add({
+  -- Misc
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.surround",
 
@@ -9,6 +10,7 @@ vim.pack.add({
   "https://github.com/bullets-vim/bullets.vim",
   "https://github.com/OXY2DEV/markview.nvim",
 
+  -- Navigaiton
   "https://github.com/nvim-lua/plenary.nvim", -- dependancy for harpoon
   {
     src = "https://github.com/ThePrimeagen/harpoon",
@@ -21,7 +23,10 @@ vim.pack.add({
   "https://github.com/ibhagwan/fzf-lua",
 
   "https://github.com/neovim/nvim-lspconfig", -- dependancy for lsp
+  "https://github.com/stevearc/oil.nvim",
+  "https://codeberg.org/andyg/leap.nvim",
 
+  -- completion
   "https://github.com/hrsh7th/nvim-cmp",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-buffer",
@@ -29,7 +34,6 @@ vim.pack.add({
   "https://github.com/L3MON4D3/LuaSnip",
   "https://github.com/saadparwaiz1/cmp_luasnip",
 
-  "https://github.com/stevearc/oil.nvim",
 
   -- Git
   "https://github.com/lewis6991/gitsigns.nvim",
