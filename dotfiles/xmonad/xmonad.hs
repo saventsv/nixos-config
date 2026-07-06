@@ -81,6 +81,7 @@ myStartupHook = do
   spawnOnce "polybar"
   spawnOnce "feh --bg-fill --randomize /home/saven/Pictures/wallpapers"
   spawnOnce "firefox"
+  spawnOnce "gammastep -O 5000"
 
 main = xmonad $ ewmh $ docks def 
   { modMask = mod4Mask
