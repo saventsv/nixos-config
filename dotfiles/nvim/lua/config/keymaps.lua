@@ -93,3 +93,17 @@ set('n', '<A-5>', function() harpoon:list():select(5) end)
 -- Leap
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
 vim.keymap.set('n',               'S', '<Plug>(leap-from-window)')
+
+-- Experiment
+local function word_cycle()
+  local word = vim.fn.input("Word: ")
+  if word == "" then return end
+
+  -- vim.fn.setreg("/", "\\<" .. word .. "\\>")
+  vim.fn.setreg("/", "\\V" .. word)
+  vim.opt.hlsearch = true
+
+  vim.cmd("normal! n")
+end
+
+vim.keymap.set("n", "gw", word_cycle)

@@ -7,8 +7,8 @@
     maven
     python3
     nodejs
-    elixir
-    erlang
+    beamPackages.elixir
+    beamPackages.erlang
     rebar3
     cargo
   ];
