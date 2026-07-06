@@ -32,6 +32,7 @@ opt.timeoutlen = 300
 opt.grepprg = "rg --vimgrep"
 opt.grepformat = "%f:%l:%c:%m"
 opt.splitright = true
+opt.autowrite = true
 
 
 -- hilighting when yanking text
