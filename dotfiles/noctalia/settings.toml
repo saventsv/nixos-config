@@ -43,5 +43,3 @@ enabled = true
 interval_seconds = 300
 order = "random"
 
-[hooks]
-wallpaper_changed = "notify-send 'Wallpaper' 'Wallpaper changed'"
