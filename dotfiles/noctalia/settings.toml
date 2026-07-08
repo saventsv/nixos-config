@@ -18,7 +18,7 @@ end = [
   # "bluetooth",
   # "volume",
   # "brightness",
-  # "battery",
+  "battery",
   "control-center",
   # "session"
 ]
@@ -36,4 +36,12 @@ font_family = "Iosevka Term Nerd Font Mono"
 
 
 [wallpaper]
-transition= [ "fade", "disc" ]
+transition= [ "fade", "disc", "slide" ]
+
+[wallpaper.automation]
+enabled = true
+interval_seconds = 300
+order = "random"
+
+[hooks]
+wallpaper_changed = "notify-send 'Wallpaper' 'Wallpaper changed'"
