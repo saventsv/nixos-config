@@ -1,0 +1,23 @@
+/* Hide tab bar completely */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* Keep navigation toolbar visible */
+#nav-bar {
+  visibility: visible !important;
+}
+
+/* Keep unified toolbar layout stable */
+#navigator-toolbox {
+  border: none !important;
+}
+
+/* Remove The Sidebery Header */
+#sidebar-header {
+  display: none !important;
+}
+
+#sidebar-panel-header {
+  display: none !important;
+}
