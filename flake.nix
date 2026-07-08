@@ -10,10 +10,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, noctalia, ... }:
+  outputs = inputs@{ self, nixpkgs, noctalia, ... }:
   {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+
+      specialArgs = {
+        inherit inputs;
+      };
 
       modules = [
         ./hosts/laptop/configuration.nix
@@ -22,7 +26,6 @@
             "pnpm-10.29.2"
           ];
         }
-        noctalia.nixosModules.default
       ];
     };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {

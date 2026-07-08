@@ -1,0 +1,39 @@
+[theme]
+mode = "dark"
+
+[bar]
+
+order = [ "main" ]
+
+[bar.main]
+enabled = true
+position = "top"
+start = [ 
+  # "wallpaper", 
+  "workspaces" 
+]
+center = [ "clock" ]
+end = [
+  # "network",
+  # "bluetooth",
+  # "volume",
+  # "brightness",
+  # "battery",
+  "control-center",
+  # "session"
+]
+
+[widgets.clock]
+format = "{:%-I:%M %p}"
+
+[weather]
+enabled = false
+
+[shell]
+# time_format = "{%I:%M %p}"
+time_format = "{:%I:%M %p}"
+font_family = "Iosevka Term Nerd Font Mono"
+
+
+[wallpaper]
+transition= [ "fade", "disc" ]

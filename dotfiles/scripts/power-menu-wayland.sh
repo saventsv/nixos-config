@@ -10,7 +10,7 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    niri msg action quit
+    pkill -KILL -u "$USER" 
     ;;
   *)
     exit 0
