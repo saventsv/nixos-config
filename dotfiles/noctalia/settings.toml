@@ -40,6 +40,6 @@ transition= [ "fade", "disc", "slide" ]
 
 [wallpaper.automation]
 enabled = true
-interval_seconds = 300
+interval_seconds = 600
 order = "random"
 
