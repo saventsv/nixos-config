@@ -8,7 +8,7 @@
     wget
     yazi
     btop
-    nnn
+    broot
   ];
 
   programs.git = {
