@@ -44,6 +44,7 @@
     interactiveShellInit = ''
       set -o vi
       export EDITOR=nvim
+      export VISUAL=nvim
       export MANPAGER="nvim +Man!"
       export PATH="/home/saven/.local/bin/:$PATH"
 
