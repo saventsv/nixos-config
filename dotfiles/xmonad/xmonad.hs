@@ -98,7 +98,7 @@ myStartupHook = do
 
 main = xmonad $ ewmh $ docks def 
   { modMask = mod4Mask
-  , terminal = "alacritty"
+  , terminal = "st"
   , borderWidth = 3
   , normalBorderColor = "#1E2326"
   , focusedBorderColor = "#A7C080"
