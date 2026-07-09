@@ -83,4 +83,11 @@
       PS1="\u in \w \$ "
       '';
   };
+
+  environment.variables = { 
+    EDITOR = "nvim";
+    VISUAL = "nvim"; 
+    MANPAGER="nvim +Man!";
+    PATH="/home/saven/.local/bin/:$PATH";
+  };
 }
