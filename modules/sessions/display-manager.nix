@@ -6,10 +6,12 @@
   # };
   # environment.etc."lightdm/ferns.jpg".source = ./wallpapers/ferns.jpg;
   
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   wayland.enable = true;
+  # };
+  
+  services.displayManager.gdm.enable = true;
 }
 
 
