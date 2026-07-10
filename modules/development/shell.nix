@@ -83,16 +83,17 @@
     promptInit = ''
       PS1="\u in \w \$ "
       '';
-      profileExtra = ''
-        if [ -z "$SSH_AUTH_SOCK" ]; then
-          eval "$(ssh-agent -s)"
-        fi
 
-        if ! ssh-add -l >/dev/null 2>&1; then
-          ssh-add ~/.ssh/id_ed25519
-        fi
-      '';
-  };
+    loginShellInit = ''
+      if [ -z "$SSH_AUTH_SOCK" ]; then
+        eval "$(ssh-agent -s)"
+      fi
+
+      if ! ssh-add -l >/dev/null 2>&1; then
+        ssh-add ~/.ssh/id_ed25519
+      fi
+    '';
+};
 
   environment.variables = { 
     EDITOR = "nvim";
