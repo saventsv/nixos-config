@@ -9,7 +9,7 @@
     ../../modules/sessions/base.nix
     # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
-    ../../modules/sessions/dwm.nix
+    ../../modules/sessions/xmonad.nix
     ../../modules/services/printing.nix
   ];
 
@@ -27,5 +27,4 @@
       tree
     ];
   };
-
 }
