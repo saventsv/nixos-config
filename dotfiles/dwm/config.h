@@ -36,7 +36,6 @@ static const char *const autostart[] = {
 	"polybar", NULL,
 	"nm-applet", NULL,
 	"blueman-applet", NULL,
-	"firefox", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
   NULL /* terminate */
 };
