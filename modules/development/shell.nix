@@ -44,6 +44,8 @@
       ff = "fastfetch";
       nd = "nix develop";
       t = "tmux";
+      cups = "xdg-open http://localhost:631";
+      syncthing-ui = "xdg-open http://localhost:8384";
     };
 
     interactiveShellInit = ''
