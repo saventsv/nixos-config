@@ -1,6 +1,8 @@
 {pkgs, ...}:
 {
 
+  programs.ssh.startAgent = true;
+
   environment.systemPackages = with pkgs; [
     fd
     ripgrep
@@ -85,9 +87,9 @@
       shopt -s cdspell
       set completion-ignore-case on
 
-      if command -v keychain > /dev/null 2>&1; then
-        eval $(keychain --eval id_ed25519)
-      fi
+      # if command -v keychain > /dev/null 2>&1; then
+      #   eval $(keychain --eval id_ed25519)
+      # fi
       '';
 
     promptInit = ''
