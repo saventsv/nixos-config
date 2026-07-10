@@ -1,8 +1,6 @@
 {pkgs, ...}:
 {
 
-  programs.ssh.startAgent = true;
-
   environment.systemPackages = with pkgs; [
     fd
     ripgrep
@@ -12,6 +10,8 @@
     yazi
     btop
     broot
+
+    keychain
   ];
 
 
@@ -82,6 +82,10 @@
       bind '"\C-l": clear-screen'
       shopt -s cdspell
       set completion-ignore-case on
+
+      if command -v keychain > /dev/null 2>&1; then
+        eval $(keychain --eval ssh id_ed25519)
+      fi
       '';
 
     promptInit = ''
