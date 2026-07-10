@@ -11,6 +11,8 @@
     broot
   ];
 
+  services.gnome.gnome-keyring.enable = true;
+
   programs.git = {
     enable = true;
 
@@ -85,9 +87,9 @@
       '';
 
     loginShellInit = ''
-      if [ -z "$SSH_AUTH_SOCK" ]; then
-        eval "$(ssh-agent -s)"
-      fi
+      # if [ -z "$SSH_AUTH_SOCK" ]; then
+      #   eval "$(ssh-agent -s)"
+      # fi
     '';
 };
 
