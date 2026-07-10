@@ -13,15 +13,15 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [
     ./modules/base-system.nix
-    ./modules/display-manager.nix
-    ./modules/browser.nix
-    ./modules/keepassxc.nix
-    ./modules/nvim.nix
-    ./modules/shell.nix
-    ./modules/dev.nix
-    ./modules/ui.nix
-    # ./modules/niri.nix
-    ./modules/xorg.nix
-    ./modules/xmonad.nix
+    ./modules/sessions/display-manager.nix
+    ./modules/programs/browser.nix
+    ./modules/programs/keepassxc.nix
+    ./modules/development/nvim.nix
+    ./modules/development/shell.nix
+    ./modules/development/dev.nix
+    ./modules/sessions/fonts.nix
+    ./modules/sessions/status_bar.nix
+    ./modules/sessions/xorg.nix
+    ./modules/sessions/dwm.nix
   ];
 }

@@ -6,7 +6,7 @@
     /etc/nixos/hardware-configuration.nix
 
     ../../base.nix
-    ../../modules/kde.nix
+    ../../modules/sessions/kde.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

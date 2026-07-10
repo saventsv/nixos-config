@@ -59,10 +59,9 @@ myScratchpads =
   ]
 
 myKeys = 
- [ ("M-<Return>", spawn "alacritty") 
+ [ ("M-<Return>", spawn "st") 
  , ("M1-<Space>", spawn "dmenu_run") 
  , ("M-s", spawn "/home/saven/nixos-config/dotfiles/scripts/dmenu-sessions.sh") 
- , ("M-f", spawn "rofi -show window") 
  , ("M-v", spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+") 
  , ("M-S-v", spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-") 
  , ("M-b", spawn "brightnessctl set +5%") 

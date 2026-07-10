@@ -4,14 +4,15 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../../base.nix
-    ../../modules/backup.nix
-    ../../modules/work.nix
-    ../../modules/kde.nix
-    ../../modules/mangowc.nix
-    ../../modules/printing.nix
-    ../../modules/battery.nix
-    ../../modules/brightness.nix
-    ../../modules/game-dev.nix
+    ../../modules/sessions/backup.nix
+    ../../modules/sessions/kde.nix
+    ../../modules/programs/work.nix
+    ../../modules/sessions/mangowc.nix
+    ../../modules/sessions/wayland.nix
+    ../../modules/services/printing.nix
+    ../../modules/services/battery.nix
+    ../../modules/services/brightness.nix
+    ../../modules/development/game-dev.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

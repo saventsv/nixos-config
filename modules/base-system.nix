@@ -16,9 +16,6 @@
 
   nixpkgs.config.allowUnfree = true;
   
-  services.xserver.enable = true;
-  services.xserver.xkb.options = "ctrl:nocaps";
-
   services.dunst.enable = true;
 
   services.pipewire = {
@@ -28,8 +25,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    xclip
-    wl-clipboard
     gammastep
 
     libnotify
