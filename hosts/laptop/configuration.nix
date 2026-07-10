@@ -4,7 +4,7 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../../base.nix
-    ../../modules/sessions/backup.nix
+    # ../../modules/sessions/backup.nix
     # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
     ../../modules/sessions/dwm.nix
