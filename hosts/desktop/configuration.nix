@@ -7,7 +7,7 @@
 
     ../../base.nix
     ../../modules/sessions/base.nix
-    ../../modules/sessions/kde.nix
+    # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
     ../../modules/sessions/dwm.nix
     ../../modules/services/printing.nix
