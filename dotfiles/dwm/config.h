@@ -62,13 +62,14 @@ static const int refreshrate = 120;  /* refresh rate (per second) for client mov
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
+	{ "[M]",      monocle },
 	{ "[T]",      tile },    /* first entry is default */
 	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
 };
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -85,7 +86,6 @@ static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *volup[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", NULL };
 static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-", NULL };
-static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
 static const char *wallpapers[] = { "/home/saven/nixos-config/dotfiles/scripts/wallpapers.sh", NULL };
 static const char *wifi[] = { "/home/saven/nixos-config/dotfiles/scripts/wifi.sh", NULL };
 static const char *bluetooth[] = { "/home/saven/nixos-config/dotfiles/scripts/bluetooth.sh", NULL };
@@ -96,7 +96,7 @@ static const char *brightnessdown[] = { "brightnessctl", "set","5%-" ,NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ ALTKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -105,15 +105,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-  { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+  { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
   { MODKEY,                       XK_v,      spawn,          {.v = volup } },
   { MODKEY|ShiftMask,             XK_v,      spawn,          {.v = voldown } },
-  { MODKEY,                       XK_m,      spawn,          {.v = volmute } },
   { MODKEY,                       XK_w,      spawn,          {.v = wifi } },
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wallpapers } },
   { MODKEY,                       XK_c,      spawn,          {.v = bluetooth } },
