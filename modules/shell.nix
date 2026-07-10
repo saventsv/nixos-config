@@ -40,6 +40,7 @@
       grep = "grep --color=auto";
       ff = "fastfetch";
       nd = "nix develop";
+      t = "tmux";
     };
 
     interactiveShellInit = ''
