@@ -14,14 +14,10 @@
   imports = [
     ./modules/base-system.nix
     ./modules/sessions/base.nix
-    ./modules/programs/browser.nix
-    ./modules/programs/keepassxc.nix
     ./modules/development/nvim.nix
     ./modules/development/shell.nix
     ./modules/development/dev.nix
-    ./modules/sessions/fonts.nix
-    ./modules/sessions/status_bar.nix
-    ./modules/sessions/xorg.nix
-    ./modules/sessions/dwm.nix
+    # ./modules/sessions/xorg.nix
+    # ./modules/sessions/dwm.nix
   ];
 }

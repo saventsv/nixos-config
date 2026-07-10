@@ -6,7 +6,8 @@
     ../../base.nix
     ../../modules/sessions/backup.nix
     ../../modules/sessions/kde.nix
-    ../../modules/programs/work.nix
+    ../../modules/sessions/xorg.nix
+    ../../modules/sessions/xmonad.nix
     ../../modules/sessions/mangowc.nix
     ../../modules/sessions/wayland.nix
     ../../modules/services/printing.nix
