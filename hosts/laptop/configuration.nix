@@ -7,6 +7,7 @@
     # ../../modules/sessions/backup.nix
     # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
+    ../../modules/programs/talos.nix
     ../../modules/sessions/dwm.nix
     ../../modules/sessions/mangowc.nix
     ../../modules/sessions/wayland.nix
