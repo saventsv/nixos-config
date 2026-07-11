@@ -4,5 +4,6 @@
     thunar
     papirus-icon-theme
     lxappearance
+    everforest-gtk-theme
   ];
 }
