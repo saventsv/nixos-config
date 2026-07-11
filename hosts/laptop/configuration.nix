@@ -8,6 +8,7 @@
     # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
     ../../modules/programs/talos.nix
+    ../../modules/programs/virtualbox.nix
     ../../modules/programs/usbimager.nix
     ../../modules/sessions/dwm.nix
     ../../modules/sessions/mangowc.nix
