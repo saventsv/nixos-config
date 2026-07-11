@@ -11,6 +11,7 @@
     ../../modules/programs/virtualbox.nix
     ../../modules/programs/usbimager.nix
     ../../modules/sessions/dwm.nix
+    ../../modules/sessions/kde.nix
     ../../modules/sessions/mangowc.nix
     ../../modules/sessions/wayland.nix
     ../../modules/services/printing.nix
