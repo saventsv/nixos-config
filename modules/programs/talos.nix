@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  evironment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     talosctl
   ];
 }
