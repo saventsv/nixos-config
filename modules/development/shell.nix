@@ -108,5 +108,6 @@
     VISUAL = "nvim"; 
     MANPAGER="nvim +Man!";
     PATH="/home/saven/.local/bin/:$PATH";
+    GTK_THEME = "Everforest-Dark";
   };
 }
