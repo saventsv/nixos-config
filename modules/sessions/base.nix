@@ -8,6 +8,7 @@
     ../programs/keepassxc.nix
     ../programs/browser.nix
     ../programs/work.nix
+    ../programs/thunar.nix
     ./display-manager.nix
     ./fonts.nix
   ];
