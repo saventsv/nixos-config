@@ -29,7 +29,7 @@
   system.stateVersion = "26.05"; 
   users.users.saven = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "vboxusers" ]; 
+    extraGroups = [ "wheel" "libvirtd" ]; 
     packages = with pkgs; [
       tree
     ];
