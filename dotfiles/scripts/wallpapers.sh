@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+WALLPAPER_DIR="$HOME/Pictures/wallpapers/"
 
 # find images (adjust extensions if needed)
 choice=$(find "$WALLPAPER_DIR" -type f \
