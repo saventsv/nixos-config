@@ -109,6 +109,6 @@
     MANPAGER="nvim +Man!";
     PATH="/home/saven/.local/bin/:$PATH";
     GTK_THEME = "Everforest-Dark";
-    GTK_ICON_THEME = "oomx-Everforest-Dark";
+    GTK_ICON_THEME = "Papirus-Dark";
   };
 }
