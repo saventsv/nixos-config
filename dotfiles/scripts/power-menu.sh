@@ -10,8 +10,9 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    loginctl terminate-session "$USER"
+    # loginctl terminate-session "$(id -un)"
     # pkill -KILL -u "$USER" 
+    dwm-msg run_command quit
     ;;
   *)
     exit 0
