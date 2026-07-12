@@ -52,6 +52,10 @@
 
     interactiveShellInit = ''
       set -o vi
+      bind 'set show-mode-in-prompt on'
+      bind 'set vi-ins-mode-string "[INSERT] "'
+      bind 'set vi-cmd-mode-string "[NORMAL] "'
+
       export EDITOR=nvim
       export VISUAL=nvim
       export MANPAGER="nvim +Man!"
