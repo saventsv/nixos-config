@@ -28,7 +28,7 @@
   system.stateVersion = "26.05"; 
   users.users.saven = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" ]; 
+    extraGroups = [ "wheel" ]; 
     packages = with pkgs; [
       tree
     ];
