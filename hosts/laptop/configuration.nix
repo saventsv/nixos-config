@@ -11,8 +11,8 @@
     ../../modules/programs/usbimager.nix
     ../../modules/sessions/dwm.nix
     # ../../modules/sessions/kde.nix
-    ../../modules/sessions/mangowc.nix
-    ../../modules/sessions/wayland.nix
+    # ../../modules/sessions/mangowc.nix
+    # ../../modules/sessions/wayland.nix
     ../../modules/services/printing.nix
     ../../modules/services/battery.nix
     ../../modules/services/brightness.nix
