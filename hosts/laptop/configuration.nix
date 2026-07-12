@@ -7,7 +7,7 @@
     # ../../modules/sessions/backup.nix
     ../../modules/sessions/xorg.nix
     ../../modules/programs/talos.nix
-    ../../modules/programs/virt-manager.nix
+    # ../../modules/programs/virt-manager.nix
     ../../modules/programs/usbimager.nix
     ../../modules/sessions/dwm.nix
     # ../../modules/sessions/kde.nix
