@@ -10,7 +10,8 @@ case "$choice" in
     reboot
     ;;
   "Logout")
-    pkill -KILL -u "$USER" 
+    loginctl terminate-session "$USER"
+    # pkill -KILL -u "$USER" 
     ;;
   *)
     exit 0
