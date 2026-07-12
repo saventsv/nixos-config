@@ -5,13 +5,12 @@
     /etc/nixos/hardware-configuration.nix
     ../../base.nix
     # ../../modules/sessions/backup.nix
-    # ../../modules/sessions/kde.nix
     ../../modules/sessions/xorg.nix
     ../../modules/programs/talos.nix
     ../../modules/programs/virt-manager.nix
     ../../modules/programs/usbimager.nix
     ../../modules/sessions/dwm.nix
-    ../../modules/sessions/kde.nix
+    # ../../modules/sessions/kde.nix
     ../../modules/sessions/mangowc.nix
     ../../modules/sessions/wayland.nix
     ../../modules/services/printing.nix
