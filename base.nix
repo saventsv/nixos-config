@@ -13,7 +13,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [
     ./modules/base-system.nix
-    ./modules/sessions/base.nix
+    ./modules/desktop.nix
     ./modules/development/nvim.nix
     ./modules/development/shell.nix
     ./modules/development/dev.nix
