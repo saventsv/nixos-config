@@ -21,11 +21,11 @@
 
       modules = [
         ./hosts/laptop.nix
-        {
-          nixpkgs.config.permittedInsecurePackages = [
-            "pnpm-10.29.2"
-          ];
-        }
+        # {
+        #   nixpkgs.config.permittedInsecurePackages = [
+        #     "pnpm-10.29.2"
+        #   ];
+        # }
       ];
     };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
@@ -33,11 +33,11 @@
 
       modules = [
         ./hosts/desktop.nix
-        {
-          nixpkgs.config.permittedInsecurePackages = [
-            "pnpm-10.29.2"
-          ];
-        }
+        # {
+        #   nixpkgs.config.permittedInsecurePackages = [
+        #     "pnpm-10.29.2"
+        #   ];
+        # }
       ];
     };
   };
