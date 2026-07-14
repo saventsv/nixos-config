@@ -1,6 +1,7 @@
 {pkgs, ...}:
 {
 
+  services.gnome.gcr-ssh-agent.enable = false;
   programs.ssh.startAgent = true;
 
   environment.systemPackages = with pkgs; [
