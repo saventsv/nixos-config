@@ -5,5 +5,6 @@
     ./printing.nix
     ./syncthing.nix
     ./notifications.nix
+    ./cursor.nix
   ];
 }
