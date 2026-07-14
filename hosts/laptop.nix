@@ -7,7 +7,7 @@
     ../modules/sessions/xorg.nix
     ../modules/sessions/wayland.nix
     ../modules/sessions/desktops/dwm.nix
-    ../modules/sessions/desktops/niri.nix
+    ../modules/sessions/desktops/mangowc.nix
     ../modules/programs/talos.nix
     ../modules/services/battery.nix
     ../modules/services/brightness.nix
