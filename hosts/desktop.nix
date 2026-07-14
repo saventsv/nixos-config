@@ -6,11 +6,8 @@
     /etc/nixos/hardware-configuration.nix
 
     ../base.nix
-    ../modules/desktop.nix
-    # ../../modules/sessions/kde.nix
     ../modules/sessions/xorg.nix
-    ../modules/sessions/dwm.nix
-    ../modules/services/printing.nix
+    ../modules/sessions/desktops/dwm.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
