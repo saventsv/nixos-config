@@ -2,6 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     bibata-cursors
+    xsettingsd
   ];
-  services.xsettingsd.enable = true;
 }
