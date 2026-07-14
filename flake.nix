@@ -20,7 +20,7 @@
       };
 
       modules = [
-        ./hosts/laptop/configuration.nix
+        ./hosts/laptop.nix
         {
           nixpkgs.config.permittedInsecurePackages = [
             "pnpm-10.29.2"
@@ -32,7 +32,7 @@
       system = "x86_64-linux";
 
       modules = [
-        ./hosts/desktop/configuration.nix
+        ./hosts/desktop.nix
         {
           nixpkgs.config.permittedInsecurePackages = [
             "pnpm-10.29.2"

@@ -2,21 +2,15 @@
 
 {
   imports = [
+    # 1. Include the results of the hardware scan
     /etc/nixos/hardware-configuration.nix
-    ../../base.nix
-    # ../../modules/sessions/backup.nix
-    ../../modules/sessions/xorg.nix
-    ../../modules/programs/talos.nix
-    # ../../modules/programs/virt-manager.nix
-    ../../modules/programs/usbimager.nix
-    ../../modules/sessions/dwm.nix
+
+    ../base.nix
+    ../modules/desktop.nix
     # ../../modules/sessions/kde.nix
-    # ../../modules/sessions/mangowc.nix
-    # ../../modules/sessions/wayland.nix
-    ../../modules/services/printing.nix
-    ../../modules/services/battery.nix
-    ../../modules/services/brightness.nix
-    ../../modules/development/game-dev.nix
+    ../modules/sessions/xorg.nix
+    ../modules/sessions/dwm.nix
+    ../modules/services/printing.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
