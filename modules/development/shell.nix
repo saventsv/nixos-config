@@ -43,6 +43,7 @@
 
     shellAliases = {
       ll = "ls -lah";
+      ls = "ls --color=always";
       grep = "grep --color=auto";
       ff = "fastfetch";
       nd = "nix develop";
