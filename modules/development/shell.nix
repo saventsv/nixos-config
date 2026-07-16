@@ -58,11 +58,6 @@
       bind 'set vi-ins-mode-string ""'
       bind 'set vi-cmd-mode-string "[N] "'
 
-      export EDITOR=nvim
-      export VISUAL=nvim
-      export MANPAGER="nvim +Man!"
-      export PATH="/home/saven/.local/bin/:$PATH"
-      export LS_COLORS="$LS_COLORS:*.bak=1;91"
 
       # fzf_cd() {
       #   local dir
@@ -97,6 +92,12 @@
       # if command -v keychain > /dev/null 2>&1; then
       #   eval $(keychain --eval id_ed25519)
       # fi
+
+      export EDITOR=nvim
+      export VISUAL=nvim
+      export MANPAGER="nvim +Man!"
+      export PATH="/home/saven/.local/bin/:$PATH"
+      export LS_COLORS="$LS_COLORS:*.bak=1;91"
       '';
 
     promptInit = ''
@@ -117,6 +118,5 @@
     PATH="/home/saven/.local/bin/:$PATH";
     GTK_THEME = "Everforest-Dark";
     GTK_ICON_THEME = "Papirus-Dark";
-    LS_COLORS="$LS_COLORS:*.bak=1;91";
   };
 }
