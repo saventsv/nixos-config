@@ -117,5 +117,6 @@
     PATH="/home/saven/.local/bin/:$PATH";
     GTK_THEME = "Everforest-Dark";
     GTK_ICON_THEME = "Papirus-Dark";
+    LS_COLORS="$LS_COLORS:*.bak=1;91";
   };
 }
