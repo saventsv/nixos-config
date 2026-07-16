@@ -9,6 +9,20 @@ static char *font = "Iosevka Term Nerd Font Mono:pixelsize=20:antialias=true:aut
 static int borderpx = 10;
 
 /*
+ * 1: render most of the lines/blocks characters without using the font for
+ *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+ *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render all U25XX glyphs normally from the font).
+ */
+const int boxdraw = 0;
+const int boxdraw_bold = 0;
+
+/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
+const int boxdraw_braille = 0;
+
+
+
+/*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
  * 2: scroll and/or utmp
