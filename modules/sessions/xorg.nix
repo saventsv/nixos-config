@@ -9,6 +9,7 @@
     picom
     flameshot
     feh
+    alacritty # as a backup 
 
     (pkgs.st.overrideAttrs (oldAttrs: {
       src = ../../dotfiles/st; 
