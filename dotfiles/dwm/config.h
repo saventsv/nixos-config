@@ -34,7 +34,7 @@ static const char *colors[][3]    = {
 static const char *const autostart[] = {
 	"picom", NULL,
 	"polybar", NULL,
-	"dunst", NULL,
+	// "dunst", NULL,
 	"nm-applet", NULL,
 	"blueman-applet", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
