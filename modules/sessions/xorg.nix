@@ -2,12 +2,12 @@
 {
   services.xserver.enable = true;
   services.xserver.xkb.options = "ctrl:nocaps";
-  services.flameshot.enable = true;
 
   environment.systemPackages = with pkgs; [
     polybar
     xclip
     picom
+    flameshot
     feh
 
     (pkgs.st.overrideAttrs (oldAttrs: {
