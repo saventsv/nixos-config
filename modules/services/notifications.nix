@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 {
-  services.dunst.enable = true;
-  services.dunst.enableX11 = true;
-  services.dunst.enableWayland = true;
+  services.dunst = {
+    enable = true;
+    enableX11 = true;
+    enableWayland = true;
+  };
 }
