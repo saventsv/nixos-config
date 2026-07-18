@@ -6,5 +6,6 @@
     ./browser.nix
     ./keepassxc.nix
     ./usbimager.nix
+    ./media.nix
   ];
 }
