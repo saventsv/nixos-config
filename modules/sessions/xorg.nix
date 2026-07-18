@@ -7,7 +7,7 @@
     polybar
     xclip
     picom
-    flameshot
+    scrot
     feh
 
     (pkgs.st.overrideAttrs (oldAttrs: {
