@@ -87,7 +87,8 @@
 
       bind '"\C-l": clear-screen'
       shopt -s cdspell
-      set completion-ignore-case on
+      # set completion-ignore-case on
+      bind 'set completion-ignore-case on'
 
       # if command -v keychain > /dev/null 2>&1; then
       #   eval $(keychain --eval id_ed25519)
