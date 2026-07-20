@@ -17,6 +17,7 @@
     keychain
   ];
 
+  programs.starship.enable = true;
 
   programs.git = {
     enable = true;
@@ -100,6 +101,7 @@
       export PATH="/home/saven/.local/bin/:$PATH"
       export LS_COLORS="$LS_COLORS:*.bak=1;91"
       eval "$(dircolors -b ~/.dircolors)"
+      eval "$(starship init bash)"
       '';
 
     promptInit = ''

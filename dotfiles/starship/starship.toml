@@ -1,0 +1,11 @@
+format = "$username in $directory$character"
+
+[username]
+show_always = true
+
+[directory]
+style = "cyan"
+
+[character]
+success_symbol = "$ "
+error_symbol = "$ "
