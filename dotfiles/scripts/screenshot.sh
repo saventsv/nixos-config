@@ -7,7 +7,7 @@ mkdir -p "$dir"
 
 tmp=$(mktemp --suffix=.png)
 
-scrot -s "$tmp" -f -z || exit 1
+scrot -s "$tmp" -f -z -i || exit 1
 
 name=$(printf "" | dmenu -p "Screenshot name:")
 
