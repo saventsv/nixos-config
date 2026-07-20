@@ -6,7 +6,6 @@
     ../base.nix
     ../modules/sessions/xorg.nix
     ../modules/sessions/desktops/dwm.nix
-    ../modules/sessions/desktops/backup.nix
     ../modules/programs/talos.nix
     ../modules/services/battery.nix
     ../modules/services/brightness.nix
