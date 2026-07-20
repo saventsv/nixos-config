@@ -13,11 +13,11 @@
     yazi
     btop
     broot
+    starship
 
     keychain
   ];
 
-  programs.starship.enable = true;
 
   programs.git = {
     enable = true;
