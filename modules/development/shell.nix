@@ -12,12 +12,35 @@
     wget
     yazi
     btop
-    broot
-    starship
 
     keychain
   ];
 
+  programs.starship = {
+    enable = true;
+    settings = {
+      format = "$directory$git_branch $character";
+
+      directory = {
+        style = "blue";
+        truncation_length = 3;
+        truncate_to_repo = false;
+        format = " [$path]($style)";
+      };
+
+      git_branch = {
+        symbol = " ";
+        style = "purple";
+        format = " on [$symbol$branch]($style)";
+      };
+
+      character = {
+        success_symbol = "󰘧 ";
+        error_symbol = "󰘧 ";
+        vimcmd_symbol = " ";
+      };
+    };
+  };
 
   programs.git = {
     enable = true;
@@ -57,7 +80,8 @@
       set -o vi
       bind 'set show-mode-in-prompt on'
       bind 'set vi-ins-mode-string ""'
-      bind 'set vi-cmd-mode-string "[N] "'
+      # bind 'set vi-cmd-mode-string "[N] "'
+      bind 'set vi-cmd-mode-string "[] "'
 
 
       # fzf_cd() {
