@@ -63,14 +63,13 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- Once again trying to go without autopairs
--- vim.api.nvim_create_autocmd("InsertEnter", {
---   once = true,
---   callback = function()
---     local autopairs = require("nvim-autopairs")
---     autopairs.setup({})
---   end,
--- })
+vim.api.nvim_create_autocmd("InsertEnter", {
+  once = true,
+  callback = function()
+    local autopairs = require("nvim-autopairs")
+    autopairs.setup({})
+  end,
+})
 
 require("everforest").setup({
   background = "hard",
