@@ -15,6 +15,12 @@ static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *altbarcmd        = ""; /* Alternate bar launch command */ 
 static const char *fonts[]          = { "Iosevka Term Nerd Font Mono:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
+/*  Display modes of the tab bar: never shown, always shown, shown only in  */
+/*  monocle mode in the presence of several windows.                        */
+/*  Modes after showtab_nmodes are disabled.                                */
+enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always};
+static const int showtab			= showtab_auto;        /* Default tab bar show mode */
+static const int toptab				= False;               /* False means bottom tab bar */
 // static const char col_gray1[]       = "#222222";
 // static const char col_gray2[]       = "#444444";
 // static const char col_gray3[]       = "#bbbbbb";
@@ -109,6 +115,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[0]} },
++	{ MODKEY,                       XK_z,      tabmode,        {-1} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
