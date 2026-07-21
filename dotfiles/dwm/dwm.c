@@ -258,6 +258,7 @@ static void spawnbar();
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void tile(Monitor *m);
+static void carousel(Monitor *m);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void toggletag(const Arg *arg);
@@ -2253,6 +2254,90 @@ tile(Monitor *m)
 			if (ty + HEIGHT(c) < m->wh)
 			ty += HEIGHT(c) + m->gappih*ie;
 		}
+}
+
+
+void
+carousel(Monitor *m)
+{
+	Client *c, *prev = NULL, *next = NULL;
+	unsigned int n = 0;
+	unsigned int i = 0;
+	unsigned int oe = enablegaps;
+	unsigned int ie = enablegaps;
+
+	int preview;
+	int center;
+
+	/* Count clients */
+	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
+		n++;
+
+	if (!n)
+		return;
+
+	/* Find previous and next clients */
+	if (m->sel) {
+		Client *p = NULL;
+
+		for (c = nexttiled(m->clients); c; c = nexttiled(c->next)) {
+			if (c == m->sel) {
+				prev = p;
+				next = nexttiled(c->next);
+				break;
+			}
+			p = c;
+		}
+
+		/* wrap previous */
+		if (!prev) {
+			for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
+				prev = c;
+		}
+
+		/* wrap next */
+		if (!next)
+			next = nexttiled(m->clients);
+	}
+
+	/* Preview width */
+	preview = m->ww / 8;
+	center = m->ww - (preview * 2);
+
+	for (c = nexttiled(m->clients); c; c = nexttiled(c->next)) {
+
+		if (c == m->sel) {
+			/* focused window */
+			resize(c,
+				m->wx + preview + m->gappov * oe,
+				m->wy + m->gappoh * oe,
+				center - 2 * c->bw - m->gappiv * ie,
+				m->wh - 2 * c->bw - 2 * m->gappoh * oe,
+				0);
+
+		} else if (c == prev) {
+			/* previous window */
+			resize(c,
+				m->wx + m->gappov * oe,
+				m->wy + m->gappoh * oe,
+				preview - 2 * c->bw - m->gappiv * ie,
+				m->wh - 2 * c->bw - 2 * m->gappoh * oe,
+				0);
+
+		} else if (c == next) {
+			/* next window */
+			resize(c,
+				m->wx + m->ww - preview + m->gappov * oe,
+				m->wy + m->gappoh * oe,
+				preview - 2 * c->bw - m->gappiv * ie,
+				m->wh - 2 * c->bw - 2 * m->gappoh * oe,
+				0);
+
+		} else {
+			/* hide unused clients */
+			resize(c, -1000, -1000, 1, 1, 0);
+		}
+	}
 }
 
 void
