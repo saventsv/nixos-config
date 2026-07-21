@@ -7,7 +7,7 @@
     polybar
     xclip
     picom
-    scrot
+    xfce4-screenshooter
     feh
 
     (pkgs.st.overrideAttrs (oldAttrs: {

@@ -3,6 +3,5 @@
   environment.systemPackages = with pkgs; [
     mpv
     imv
-    vlc
   ];
 }
