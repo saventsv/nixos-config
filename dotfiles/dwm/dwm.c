@@ -145,6 +145,7 @@ struct Monitor {
 	unsigned int tagset[2];
 	TagState tagstate;
 	int showbar;
+	int showtab;
 	int topbar;
   int toptab;
 	Client *clients;
