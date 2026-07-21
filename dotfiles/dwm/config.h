@@ -19,7 +19,7 @@ static const char dmenufont[]       = "monospace:size=10";
 /*  monocle mode in the presence of several windows.                        */
 /*  Modes after showtab_nmodes are disabled.                                */
 enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always};
-static const int showtab			= showtab_auto;        /* Default tab bar show mode */
+static const int showtab			= showtab_always;        /* Default tab bar show mode */
 static const int toptab				= False;               /* False means bottom tab bar */
 // static const char col_gray1[]       = "#222222";
 // static const char col_gray2[]       = "#444444";
