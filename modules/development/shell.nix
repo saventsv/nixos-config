@@ -66,8 +66,9 @@
     enable = true;
 
     shellAliases = {
+      # ls = "ls --color=always";
+      ls = "ls --classify";
       ll = "ls -lah";
-      ls = "ls --color=always";
       grep = "grep --color=auto";
       ff = "fastfetch";
       nd = "nix develop";
@@ -123,7 +124,6 @@
       export VISUAL=nvim
       export MANPAGER="nvim +Man!"
       export PATH="/home/saven/.local/bin/:$PATH"
-      export LS_COLORS="$LS_COLORS:*.bak=1;91"
       eval "$(dircolors -b ~/.dircolors)"
       eval "$(starship init bash)"
       '';

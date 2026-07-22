@@ -1114,6 +1114,7 @@ focusstack(const Arg *arg)
 		focus(c);
 		restack(selmon);
 	}
+  arrange(selmon);
 }
 
 void
