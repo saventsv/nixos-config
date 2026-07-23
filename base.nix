@@ -5,6 +5,7 @@
     dates = "daily";
     options = "--delete-older-than 7d";
   };
+  nix.firewall.enable = false;
 
   boot.loader.systemd-boot.configurationLimit = 10;
 

@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     vscodium
+    kitty
   ];
 
   services.desktopManager.plasma6.enable = true;
