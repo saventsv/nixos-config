@@ -15,4 +15,5 @@ ln -snf ~/nixos-config/dotfiles/polybar ~/.config/polybar
 ln -snf ~/nixos-config/dotfiles/noctalia ~/.config/noctalia
 ln -snf ~/nixos-config/dotfiles/alacritty ~/.config/alacritty
 ln -snf ~/nixos-config/dotfiles/fastfetch ~/.config/fastfetch
+ln -snf ~/nixos-config/dotfiles/dvtm ~/.config/dvtm
 ln -snf ~/nixos-config/dotfiles/wallpapers/ ~/Pictures/wallpapers
