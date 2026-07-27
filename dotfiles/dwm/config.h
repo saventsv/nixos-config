@@ -43,6 +43,7 @@ static const char *const autostart[] = {
 	"dunst", NULL,
 	"nm-applet", NULL,
 	"blueman-applet", NULL,
+  "gammastep", "-O", "5000", NULL,
 	"feh", "--bg-fill", "--randomize", "/home/saven/Pictures/wallpapers", NULL, 
   NULL /* terminate */
 };

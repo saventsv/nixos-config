@@ -7,6 +7,7 @@
     polybar
     xclip
     picom
+    gammastep
     xfce4-screenshooter
     feh
 
