@@ -157,7 +157,6 @@
       export VISUAL=nvim
       export MANPAGER="nvim +Man!"
       export PATH="/home/saven/.local/bin/:$PATH"
-      eval "$(dircolors -b ~/.dircolors)"
       eval "$(starship init bash)"
       '';
 
