@@ -20,7 +20,7 @@
   <focusLast>yes</focusLast>
   <!-- focus the last used window when changing desktops, instead of the one
        under the mouse pointer. when followMouse is enabled -->
-  <underMouse>no</underMouse>
+  <underMouse>yes</underMouse>
   <!-- move focus under the mouse, even when the mouse is not moving -->
   <focusDelay>200</focusDelay>
   <!-- when followMouse is enabled, the mouse must be inside the window for
@@ -295,6 +295,11 @@
   <keybind key="W-q">
     <action name="Close"/>
   </keybind>
+
+  <keybind key="W-q">
+    <action name="Close"/>
+  </keybind>
+
   <keybind key="A-Escape">
     <action name="Lower"/>
     <action name="FocusToBottom"/>
@@ -304,6 +309,12 @@
   <keybind key="A-space">
     <action name="Execute">
         <command>dmenu_run</command>
+    </action>
+  </keybind>
+
+  <keybind key="W-S-q">
+    <action name="Execute">
+        <command>power-menu</command>
     </action>
   </keybind>
 

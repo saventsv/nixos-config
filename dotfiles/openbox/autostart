@@ -17,6 +17,7 @@
 #xfce-mcs-manager &
 
 picom &
+plank &
 polybar &
 dusnt &
 nm-applet &

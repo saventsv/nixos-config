@@ -13,6 +13,7 @@ case "$choice" in
     # loginctl terminate-session "$(id -un)"
     # pkill -KILL -u "$USER" 
     dwm-msg run_command quit
+    openbox --exit
     ;;
   *)
     exit 0
