@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 mkdir -p ~/Pictures
-ln -snf ~/nixos-config/dotfiles/dircolors/.dircolors ~/.dircolors
 ln -snf ~/nixos-config/dotfiles/niri ~/.config/niri
+ln -snf ~/nixos-config/dotfiles/openbox ~/.config/openbox
 ln -snf ~/nixos-config/dotfiles/nvim ~/.config/nvim
 ln -snf ~/nixos-config/dotfiles/rofi ~/.config/rofi
 ln -snf ~/nixos-config/dotfiles/tmux ~/.config/tmux
