@@ -5,15 +5,27 @@
     kitty
   ];
 
-  services.desktopManager.plasma6.enable = true;
+services.desktopManager.plasma6.enable = true;
 
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    gwenview
-    okular
-    kate
-    ark
-    spectacle
-    elisa
-    khelpcenter
-  ];
+environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  gwenview
+  okular
+  dolphin
+  dolphin-plugins
+  konsole
+  kolourpaint
+  kate
+  ark
+  spectacle
+  elisa
+  khelpcenter
+  kwallet
+  kwalletmanager
+  kamoso
+  kget
+  ktorrent
+  kpat
+  kdeconnect-kde
+];
+
 }
