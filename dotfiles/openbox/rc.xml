@@ -312,6 +312,12 @@
     </action>
   </keybind>
 
+  <keybind key="W-S-w">
+    <action name="Execute">
+        <command>wallpapers</command>
+    </action>
+  </keybind>
+
   <keybind key="W-S-q">
     <action name="Execute">
         <command>power-menu</command>
