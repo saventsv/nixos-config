@@ -6,7 +6,7 @@
     ../base.nix
     ../modules/sessions/xorg.nix
     ../modules/sessions/desktops/dwm.nix
-    ../modules/sessions/desktops/kde.nix
+    # ../modules/sessions/desktops/kde.nix
     ../modules/sessions/desktops/cosmic.nix
     ../modules/programs/talos.nix
     ../modules/services/battery.nix
