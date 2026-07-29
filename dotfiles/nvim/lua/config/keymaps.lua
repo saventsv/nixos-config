@@ -23,8 +23,8 @@ set('n', '<leader>tw', ':set wrap!<CR>', { buffer = true })
 set('n', '<leader>fe', ':Oil<CR>')
 
 set('n', '<leader>ff', ':FzfLua files<CR>')
-set('n', '<leader>ds', ':FzfLua lsp_document_symbols<CR>')
 set('n', '<leader>fg', ':FzfLua live_grep<CR><C-g>')
+set('n', '<leader>rg', ':FzfLua live_grep<CR><C-g>')
 
 -- buffers
 set('n', '<Tab>', ':bnext<CR>')
