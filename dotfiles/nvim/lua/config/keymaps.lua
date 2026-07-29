@@ -47,7 +47,7 @@ set('n', '<leader>co', ':copen<CR>')
 set('n', '<leader>cd', ':cexpr []<CR>')
 
 -- markdown
-set('n', '<leader>md', ':Markview<CR>')
+set('n', '<leader>tt', ':Markview<CR>')
 
 require("mini.surround").setup({
   mappings = {
