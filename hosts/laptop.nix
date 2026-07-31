@@ -7,8 +7,7 @@
     ../modules/sessions/xorg.nix
     ../modules/sessions/wayland.nix
     ../modules/sessions/desktops/dwm.nix
-    # ../modules/sessions/desktops/mangowc.nix
-    # ../modules/sessions/desktops/kde.nix
+    ../modules/sessions/desktops/mangowc.nix
     ../modules/sessions/desktops/cosmic.nix
     ../modules/programs/talos.nix
     ../modules/services/battery.nix
