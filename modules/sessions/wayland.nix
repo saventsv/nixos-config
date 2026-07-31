@@ -8,4 +8,5 @@
     rofi
     alacritty
   ];
+  programs.xwayland.enable = true;
 }
