@@ -10,6 +10,7 @@
     ../modules/sessions/desktops/mangowc.nix
     ../modules/sessions/desktops/cosmic.nix
     ../modules/programs/talos.nix
+    ../modules/programs/ventoy.nix
     ../modules/services/battery.nix
     ../modules/services/brightness.nix
     ../modules/development/game-dev.nix
