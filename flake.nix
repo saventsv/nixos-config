@@ -4,13 +4,14 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # noctalia = {
+    #   url = "github:noctalia-dev/noctalia";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = inputs@{ self, nixpkgs, noctalia, ... }:
+  # outputs = inputs@{ self, nixpkgs, noctalia, ... }:
+  outputs = inputs@{ self, nixpkgs, ... }:
   {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -21,11 +22,6 @@
 
       modules = [
         ./hosts/laptop.nix
-        # {
-        #   nixpkgs.config.permittedInsecurePackages = [
-        #     "pnpm-10.29.2"
-        #   ];
-        # }
       ];
     };
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
@@ -33,11 +29,6 @@
 
       modules = [
         ./hosts/desktop.nix
-        # {
-        #   nixpkgs.config.permittedInsecurePackages = [
-        #     "pnpm-10.29.2"
-        #   ];
-        # }
       ];
     };
   };
