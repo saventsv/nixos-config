@@ -1,6 +1,6 @@
-// spawn-at-startup "swaybg" "-i" "/home/saven/Pictures/wallpapers/ferns.jpg" "-m" "fill"
-// spawn-at-startup "waybar"
-spawn-at-startup "dms" "run"
+spawn-at-startup "swaybg" "-i" "/home/saven/Pictures/wallpapers/ferns.jpg" "-m" "fill"
+spawn-at-startup "waybar"
+// spawn-at-startup "dms" "run"
 
 input {
     keyboard {
@@ -50,8 +50,8 @@ hotkey-overlay {
 
 binds {
     Mod+Return { spawn "alacritty"; }
-    // Alt+Space { spawn-sh "rofi -show drun"; }
-    Alt+Space { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Alt+Space { spawn-sh "rofi -show drun"; }
+    // Alt+Space { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
 
     Mod+Shift+P { spawn-sh "hyprshot -m region --freeze"; }
 
