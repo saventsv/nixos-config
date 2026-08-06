@@ -19,7 +19,7 @@
   system.stateVersion = "26.05"; 
   users.users.saven = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; 
+    extraGroups = [ "wheel" "networkmanager" ]; 
     packages = with pkgs; [
       tree
     ];
