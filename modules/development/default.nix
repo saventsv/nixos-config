@@ -4,5 +4,6 @@
     ./dev.nix
     ./nvim.nix
     ./shell.nix
+    ./rustlings.nix
   ];
 }
