@@ -15,6 +15,7 @@
     jdt-language-server
     clang-tools
     elixir-ls
+    rust-analyzer-unwrapped
 
 
     # quickshell lsp
@@ -37,6 +38,7 @@
       p.java
       p.qmljs
       p.typescript
+      p.rust
     ]))
   ];
 }
