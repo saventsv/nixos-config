@@ -5,6 +5,7 @@
     papirus-icon-theme
     lxappearance
     # everforest-gtk-theme
-    kdePackages.breeze-gtk
+    graphite-gtk-theme
+    # kdePackages.breeze-gtk
   ];
 }
