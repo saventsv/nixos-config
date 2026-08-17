@@ -4,8 +4,7 @@
     thunar
     papirus-icon-theme
     lxappearance
-    # everforest-gtk-theme
-    orchis-theme
+    adw-gtk3
     # kdePackages.breeze-gtk
   ];
 }
