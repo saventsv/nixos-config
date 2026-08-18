@@ -10,8 +10,8 @@
     beamPackages.elixir
     beamPackages.erlang
     rebar3
-    rust
-    # cargo
+    rustc
+    cargo
   ];
   programs.java.enable = true;
 }
