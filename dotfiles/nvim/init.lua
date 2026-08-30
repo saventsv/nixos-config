@@ -1,38 +1,26 @@
--- Options
-local opt = vim.opt
-local group = vim.g
+-- TODO restructure all of the nvim config to be more like a lazy.nvim like config
 
-opt.number = true
-opt.rnu = true
-opt.wrap = false
-opt.shiftwidth = 2
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.swapfile = false
-group.netrw_banner = 0
-group.netrw_browse_split = 0
-group.netrw_keepdir = 1
-group.netrw_list_hide = [[^\.[^.].*,^\.$]]
-opt.expandtab = true
-opt.ignorecase = true
-opt.iskeyword:remove({ "_", "-", "(", ")", "<", ">" })
-opt.formatoptions:remove({ "c", "r", "o" })
-opt.undofile = true
-group.netrw_fastbrowse = 0
-opt.autoindent = true
-opt.smartindent = true
-opt.smartcase = true
-opt.scrolloff = 10
-opt.cursorline = true
-opt.wildmenu = true
-opt.wildmode = "longest:full,full"
-opt.wildignorecase = true
-opt.timeout = true
-opt.timeoutlen = 350
-opt.grepprg = "rg --vimgrep"
-opt.grepformat = "%f:%l:%c:%m"
-opt.splitright = true
-opt.autowrite = true
+vim.opt.number = true
+vim.opt.rnu = true
+vim.opt.wrap = false
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.swapfile = false
+vim.g.netrw_banner = 0
+vim.opt.expandtab = true
+vim.opt.ignorecase = true
+vim.opt.undofile = true
+vim.g.netrw_fastbrowse = 0
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.smartcase = true
+vim.opt.scrolloff = 10
+vim.opt.cursorline = true
+vim.opt.timeout = true
+vim.opt.timeoutlen = 350
+vim.opt.splitright = true
+vim.opt.linebreak = true
 
 
 -- hilighting when yanking text
@@ -44,7 +32,25 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-require("config.plugins")
-require("config.lsp")
-require("config.cmp")
+-- require("config.plugins")
 require("config.keymaps")
+require("plugins.navigation")
+require("plugins.lsp")
+require("plugins.treesitter")
+require("plugins.brackets")
+require("plugins.git")
+require("plugins.markdown")
+require("plugins.ui")
+-- require("config.lsp")
+-- require("config.cmp")
+
+ 
+local function deleteplugin()
+  vim.ui.input({ prompt = "Plugin: "}, function(package)
+    if package then
+      vim.pack.del({ package })
+    end
+  end)
+end
+
+vim.keymap.set("n", "<leader>pd", deleteplugin)

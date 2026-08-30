@@ -1,106 +1,28 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local set = vim.keymap.set
-
 -- General
-set('n', '<C-d>', '<C-d>zz')
-set('n', '<C-u>', '<C-u>zz')
-set('i', '<C-Backspace>', '<C-w>', { silent = true })
--- set({'n', 'v'}, '<C-y>', '"+y', { desc = 'Copy to system clipboard' })
-set({'n'; 'v'}, '<C-y>', '"+y', { desc = 'Copy to system clipboard' })
-set('i', '<C-v>', '<C-g>u<C-r><C-o>+')
-set('n', '<leader>e', vim.diagnostic.open_float)
-set('n', 'gh', ':nohl<CR>')
-set({'v', 'n'}, '<C-r>', ':s//g<Left><Left>')
-set('n', '<leader>rw', [[:s/\<<C-r><C-w>\>//g<Left><Left>]])
-set('n', '<leader>hs', ':split<CR>')
-set('n', '<leader>vs', ':vsplit<CR>')
-set('n', '<leader>tw', ':set wrap!<CR>')
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set({"n"; "v"}, "<leader>y", "\"+y")
+vim.keymap.set("n", "gh", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>tw", ":set wrap!<CR>")
+vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("x", "<", "<gv")
+vim.keymap.set("x", ">", ">gv")
 
+-- Buffers
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
 
--- file explorers
-set('n', '<leader>fe', ':Oil<CR>')
+vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>hs", ":split<CR>")
 
-set('n', '<leader>ff', ':FzfLua files<CR>')
-set('n', '<leader>fg', ':FzfLua live_grep<CR><C-g>')
-set('n', '<leader>rg', ':FzfLua live_grep<CR><C-g>')
-
--- buffers
-set('n', '<Tab>', ':bnext<CR>')
-set('n', '<S-Tab>', ':bprev<CR>')
-
-set('n', '<C-h>', '<C-w>h')
-set('n', '<C-j>', '<C-w>j')
-set('n', '<C-k>', '<C-w>k')
-set('n', '<C-l>', '<C-w>l')
-
-set('n', '<leader>vs', ':vsplit<CR>')
-set('n', '<leader>hs', ':split<CR>')
-
-set('n', '<leader>cb', ':close<CR>')
-
--- quickfix list
-set('n', '<leader>ca', ':silent! grepadd ')
-set('n', '<leader>co', ':copen<CR>')
--- set('n', '<leader>cc', ':cclose<CR>')
-set('n', '<leader>cd', ':cexpr []<CR>')
-
--- markdown
-set('n', '<leader>tt', ':Markview<CR>')
-
-require("mini.surround").setup({
-  mappings = {
-    add = "ga",
-    delete = "gd",
-    replace = "gr",
-
-    suffix_last = "l",
-    suffix_next = "n",
-  },
-  custom_surroundings = {
-    ["("] = { output = { left = "(", right = ")" } },
-    [")"] = { output = { left = "( ", right = " )" } },
-
-    ["<"] = { output = { left = "<", right = ">" } },
-    [">"] = { output = { left = "< ", right = " >" } },
-
-    ["["] = { output = { left = "[", right = "]" } },
-    ["]"] = { output = { left = "[ ", right = " ]" } },
-
-    ["{"] = { output = { left = "{", right = "}" } },
-    ["}"] = { output = { left = "{ ", right = " }" } },
-  },
-})
-
--- Harpoon
-local harpoon = require("harpoon")
-
-harpoon:setup()
-
-set('n', '<leader>ha', function() harpoon:list():add() end)
-set('n', '<leader>he', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-
-set('n', '<A-1>', function() harpoon:list():select(1) end)
-set('n', '<A-2>', function() harpoon:list():select(2) end)
-set('n', '<A-3>', function() harpoon:list():select(3) end)
-set('n', '<A-4>', function() harpoon:list():select(4) end)
-set('n', '<A-5>', function() harpoon:list():select(5) end)
-
--- Leap
-vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
-vim.keymap.set('n',               'S', '<Plug>(leap-from-window)')
-
--- Experiment
-local function word_cycle()
-  local word = vim.fn.input("Word: ")
-  if word == "" then return end
-
-  -- vim.fn.setreg("/", "\\<" .. word .. "\\>")
-  vim.fn.setreg("/", "\\V" .. word)
-  vim.opt.hlsearch = true
-
-  vim.cmd("normal! n")
-end
-
-vim.keymap.set("n", "gw", word_cycle)
+vim.keymap.set("n", "<leader>cb", ":close<CR>")

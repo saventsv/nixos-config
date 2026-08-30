@@ -1,6 +1,8 @@
 {pkgs, config, ...}:
 {
 
+  programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
     neovim
     vim # backup
@@ -14,13 +16,7 @@
     bash-language-server
     jdt-language-server
     clang-tools
-    elixir-ls
     rust-analyzer-unwrapped
-
-
-    # quickshell lsp
-    qt6.qtdeclarative   
-    qt6.qttools
 
     tree-sitter
 

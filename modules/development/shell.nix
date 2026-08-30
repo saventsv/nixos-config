@@ -164,11 +164,11 @@
       PS1="\u in \w \$ "
       '';
 
-    # loginShellInit = ''
-    #   if [ -z "$SSH_AUTH_SOCK" ]; then
-    #     eval "$(ssh-agent -s)"
-    #   fi
-    # '';
+    loginShellInit = ''
+      if [ -z "$SSH_AUTH_SOCK" ]; then
+        eval "$(ssh-agent -s)"
+      fi
+    '';
 };
 
   environment.variables = { 

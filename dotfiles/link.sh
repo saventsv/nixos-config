@@ -4,7 +4,7 @@ mkdir -p ~/Pictures
 ln -snf ~/nixos-config/dotfiles/niri ~/.config/niri
 ln -snf ~/nixos-config/dotfiles/nvim ~/.config/nvim
 ln -snf ~/nixos-config/dotfiles/rofi ~/.config/rofi
-ln -snf ~/nixos-config/dotfiles/tmux ~/.config/tmux
+ln -snf ~/nixos-config/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -snf ~/nixos-config/dotfiles/dunst ~/.config/dunst
 ln -snf ~/nixos-config/dotfiles/mango ~/.config/mango
 ln -snf ~/nixos-config/dotfiles/picom ~/.config/picom

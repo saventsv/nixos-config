@@ -3,10 +3,16 @@ vim.pack.add({
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.surround",
 
+  -- visual
+  "https://github.com/folke/snacks.nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/neanias/everforest-nvim",
+  "https://github.com/folke/noice.nvim",
+  "https://github.com/MunifTanjim/nui.nvim", -- dependancy for noice
+
   "https://github.com/wakatime/vim-wakatime",
 
-  "https://github.com/neanias/everforest-nvim",
-
+  -- Markdown
   "https://github.com/bullets-vim/bullets.vim",
   "https://github.com/OXY2DEV/markview.nvim",
 
@@ -16,17 +22,15 @@ vim.pack.add({
     src = "https://github.com/ThePrimeagen/harpoon",
     version = "harpoon2",
   },
-  -- dependancies for fzflua?
-  "https://github.com/nvim-treesitter/nvim-treesitter",
-  "https://github.com/nvim-tree/nvim-web-devicons",
 
   "https://github.com/ibhagwan/fzf-lua",
-
-  "https://github.com/neovim/nvim-lspconfig", -- dependancy for lsp
   "https://github.com/stevearc/oil.nvim",
-  "https://codeberg.org/andyg/leap.nvim",
 
-  -- completion
+  -- lsp stuff
+  "https://github.com/nvim-treesitter/nvim-treesitter",
+  "https://github.com/neovim/nvim-lspconfig", -- dependancy for lsp
+  "https://github.com/nvim-tree/nvim-web-devicons",
+
   "https://github.com/hrsh7th/nvim-cmp",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-buffer",
@@ -37,10 +41,51 @@ vim.pack.add({
 
   -- Git
   "https://github.com/lewis6991/gitsigns.nvim",
-  "https://github.com/tpope/vim-fugitive",
 })
 
 
+require("lualine").setup({
+  icons_enabled = true,
+  theme = "everforest",
+})
+
+require("noice").setup({
+  lsp = {
+    override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true,
+    },
+  },
+  presets = {
+    bottom_search = true,
+    command_palette = true,
+    long_message_to_split = true,
+    inc_rename = false,
+    lsp_doc_border = false,
+  },
+})
+
+require("snacks").setup({
+  bigfile = { enabled = false },
+  dashboard = {
+    enabled = true,
+    sections = {
+      { section = "header" },
+      { section = "keys", gap = 1, padding = 1 },
+    },
+  },
+  explorer = { enabled = false },
+  indent = { enabled = true },
+  input = { enabled = false },
+  notifier = { enabled = true },
+  picker = { enabled = false },
+  quickfile = { enabled = false },
+  scope = { enabled = false },
+  scroll = { enabled = false },
+  statuscolumn = { enabled = true },
+  words = { enabled = false },
+})
 
 require("fzf-lua").setup({})
 require("oil").setup({
@@ -90,6 +135,7 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end
 })
+
 
 
 vim.o.background = "dark"
