@@ -56,24 +56,12 @@ vim.lsp.config("jdtls", {
   capabilities = capabilities,
 })
 
-vim.lsp.config("elixirls", {
-  on_attach = on_attach,
-  cmd = { "elixir-ls" },
-})
-
 vim.lsp.config("rust_analyzer", {
   on_attach = on_attach,
   capabilities = capabilities,
 
   settings = {
     ["rust-analyzer"] = {
-      cargo = {
-        allFeatures = true,
-      },
-
-      check = {
-        command = "clippy",
-      },
 
       procMacro = {
         enable = true,
@@ -90,7 +78,6 @@ vim.lsp.config("rust_analyzer", {
 
   vim.lsp.enable({
     "lua_ls",
-    "elixirls",
     "rust_analyzer",
     "gopls",
     "ts_ls",
