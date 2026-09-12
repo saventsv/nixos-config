@@ -62,7 +62,8 @@ binds {
     Mod+Q { close-window; }
     Mod+Shift+E { spawn-sh "systemctl poweroff"; }
     Mod+Shift+W { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
-    Mod+Shift+Q { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/power-menu-wayland.sh"; }
+    // Mod+Shift+Q { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/power-menu-wayland.sh"; }
+    Mod+Shift+Q { spawn-sh "dms ipc powermenu toggle"; }
     Mod+C { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/bluetooth-wayland.sh"; }
     Mod+W { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/wifi-wayland.sh"; }
 

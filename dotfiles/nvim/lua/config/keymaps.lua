@@ -15,6 +15,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
+vim.keymap.set("v", "<leader>rs", ":s//g<Left><Left>")
 
 -- Buffers
 vim.keymap.set("n", "<leader>h", "<C-w>h")
