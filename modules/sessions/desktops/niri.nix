@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     quickshell
     dms-shell
+    xwayland-satellite
   ];
 }
 

@@ -1,6 +1,10 @@
-spawn-at-startup "swaybg" "-i" "/home/saven/Pictures/wallpapers/ferns.jpg" "-m" "fill"
-spawn-at-startup "waybar"
-// spawn-at-startup "dms" "run"
+// spawn-at-startup "swaybg" "-i" "/home/saven/Pictures/wallpapers/ferns.jpg" "-m" "fill"
+// spawn-at-startup "waybar"
+spawn-at-startup "dms" "run"
+
+output "eDP-1" {
+    scale 1.00
+}
 
 input {
     keyboard {
@@ -50,8 +54,8 @@ hotkey-overlay {
 
 binds {
     Mod+Return { spawn "alacritty"; }
-    Alt+Space { spawn-sh "rofi -show drun"; }
-    // Alt+Space { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    // Alt+Space { spawn-sh "rofi -show drun"; }
+    Alt+Space { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
 
     Mod+Shift+P { spawn-sh "hyprshot -m region --freeze"; }
 
@@ -62,10 +66,10 @@ binds {
     Mod+C { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/bluetooth-wayland.sh"; }
     Mod+W { spawn-sh "/home/saven/nixos-config/dotfiles/scripts/wifi-wayland.sh"; }
 
-    Mod+H { focus-column-left; }
-    Mod+L { focus-column-right; }
-    Mod+J { focus-window-or-workspace-down; }
-    Mod+K { focus-window-or-workspace-up; }
+    Mod+K { focus-column-left; }
+    Mod+J { focus-column-right; }
+    // Mod+J { focus-window-or-workspace-down; }
+    // Mod+K { focus-window-or-workspace-up; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -87,10 +91,10 @@ binds {
     Mod+Shift+8 { move-window-to-workspace 8; }
     Mod+Shift+9 { move-window-to-workspace 9; }
 
-    Mod+Shift+H { move-column-left; }
-    Mod+Shift+L { move-column-right; }
-    Mod+Shift+J { move-window-down; }
-    Mod+Shift+K { move-window-up; }
+    Mod+H { move-column-left; }
+    Mod+L { move-column-right; }
+    // Mod+Shift+J { move-window-down; }
+    // Mod+Shift+K { move-window-up; }
 
     Mod+Ctrl+H  { focus-monitor-left; }
     Mod+Ctrl+L { focus-monitor-right; }
