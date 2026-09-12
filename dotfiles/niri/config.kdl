@@ -113,5 +113,5 @@ binds {
     Mod+B {spawn-sh "brightnessctl set +5%"; }
     Mod+Shift+B {spawn-sh "brightnessctl set 5%-"; }
 
-    Mod+S { switch-preset-column-width; }
+    Mod+M { switch-preset-column-width; }
 }
