@@ -23,7 +23,7 @@ vim.opt.splitright = true
 vim.opt.linebreak = true
 
 
--- hilighting when yanking text
+-- highlighting when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -34,7 +34,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- require("config.plugins")
 require("config.keymaps")
-require("config.lsp")
 require("plugins.navigation")
 require("plugins.lsp")
 require("plugins.treesitter")
@@ -45,7 +44,6 @@ require("plugins.ui")
 -- require("config.lsp")
 -- require("config.cmp")
 
- 
 local function deleteplugin()
   vim.ui.input({ prompt = "Plugin: "}, function(package)
     if package then
