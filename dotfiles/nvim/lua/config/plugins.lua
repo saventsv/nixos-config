@@ -140,4 +140,3 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.o.background = "dark"
 vim.cmd.colorscheme("everforest")
-

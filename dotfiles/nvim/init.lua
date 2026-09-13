@@ -34,6 +34,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- require("config.plugins")
 require("config.keymaps")
+require("config.lsp")
 require("plugins.navigation")
 require("plugins.lsp")
 require("plugins.treesitter")

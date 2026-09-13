@@ -7,121 +7,120 @@ local on_attach = function(_, bufnr)
   end, opts)
 
   vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
+  vim.keymap.set("n", "<leader>of", vim.diagnostic.open_float, opts)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
   vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 end
 
 
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = { globals = { "vim" } },
-    },
-  },
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-
-
-vim.lsp.config("gopls", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("clangd", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("ts_ls", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("bashls", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("nixd", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("pyright", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-vim.lsp.config("jdtls", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-
-vim.lsp.config("rust_analyzer", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-
-  settings = {
-    ["rust-analyzer"] = {
-
-      procMacro = {
-        enable = true,
-      },
-    },
-  },
-})
-
-
-vim.lsp.enable({
-  "lua_ls",
-  "rust_analyzer",
-  "gopls",
-  "ts_ls",
-  "nixd",
-  "bashls",
-  -- "qmlls",
-  "clangd",
-  "pyright",
-  "jdtls",
-})
-
-
-vim.diagnostic.config({
-  underline = false,
-
-  virtual_text = {
-    spacing = 2,
-    prefix = "●",
-  },
-  -- signs = {
-    --   text = {
-      --     [vim.diagnostic.severity.ERROR] = "",
-      --     [vim.diagnostic.severity.WARN] = "▲",
-      --     [vim.diagnostic.severity.INFO] = "»",
-      --     [vim.diagnostic.severity.HINT] = "⚑",
-      --   }
-      -- },
-
-      severity_sort = true,
-      float = {
-        border = "rounded",
-        source = "always",
-      },
-      update_in_insert = false,
-    })
-
-    vim.api.nvim_create_autocmd("CursorHold", {
-      callback = function ()
-        vim.diagnostic.open_float(nil, {
-          focus = false
-        })
-      end,
-    })
-
-    vim.api.nvim_create_autocmd("CursorHold", {
-      callback = function ()
-        vim.lsp.buf.hover({
-          focus = false
-        })
-      end,
-    })
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+--
+-- vim.lsp.config("lua_ls", {
+--   settings = {
+--     Lua = {
+--       diagnostics = { globals = { "vim" } },
+--     },
+--   },
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+--
+--
+-- vim.lsp.config("gopls", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("clangd", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("ts_ls", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("bashls", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("nixd", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("pyright", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+-- vim.lsp.config("jdtls", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+--
+-- vim.lsp.config("rust_analyzer", {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--
+--   settings = {
+--     ["rust-analyzer"] = {
+--
+--       procMacro = {
+--         enable = true,
+--       },
+--     },
+--   },
+-- })
+--
+--
+-- vim.lsp.enable({
+--   "lua_ls",
+--   "rust_analyzer",
+--   "gopls",
+--   "ts_ls",
+--   "nixd",
+--   "bashls",
+--   -- "qmlls",
+--   "clangd",
+--   "pyright",
+--   "jdtls",
+-- })
+--
+--
+-- vim.diagnostic.config({
+--   underline = false,
+--
+--   virtual_text = {
+--     spacing = 2,
+--     prefix = "●",
+--   },
+--   -- signs = {
+--     --   text = {
+--       --     [vim.diagnostic.severity.ERROR] = "",
+--       --     [vim.diagnostic.severity.WARN] = "▲",
+--       --     [vim.diagnostic.severity.INFO] = "»",
+--       --     [vim.diagnostic.severity.HINT] = "⚑",
+--       --   }
+--       -- },
+--
+--       severity_sort = true,
+--       float = {
+--         border = "rounded",
+--         source = "always",
+--       },
+--       update_in_insert = false,
+--     })
+--
+--     vim.api.nvim_create_autocmd("CursorHold", {
+--       callback = function ()
+--         vim.diagnostic.open_float(nil, {
+--           focus = false
+--         })
+--       end,
+--     })
+--
+--     vim.api.nvim_create_autocmd("CursorHold", {
+--       callback = function ()
+--         vim.lsp.buf.hover({
+--           focus = false
+--         })
+--       end,
+--     })
