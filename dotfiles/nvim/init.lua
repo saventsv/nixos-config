@@ -1,5 +1,3 @@
--- TODO restructure all of the nvim config to be more like a lazy.nvim like config
-
 vim.opt.number = true
 vim.opt.rnu = true
 vim.opt.wrap = false
