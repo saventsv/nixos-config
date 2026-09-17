@@ -26,6 +26,9 @@ vim.keymap.set('n', '<leader>fe', ':Oil<CR>')
 
 vim.keymap.set('n', '<leader>ff', ':FzfLua files<CR>')
 vim.keymap.set('n', '<leader>rg', ':FzfLua live_grep<CR><C-g>')
+vim.keymap.set("n", "<leader>fs", function()
+  require("fzf-lua").lsp_document_symbols()
+end, { desc = "Find symbols" })
 
 local harpoon = require("harpoon")
 
