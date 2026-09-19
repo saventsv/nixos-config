@@ -2,9 +2,10 @@
 {
   programs.mango.enable = true;
 
-  environment.systemPackages = [
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # noctalia-shell
+  environment.systemPackages = with pkgs; [
+    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # # noctalia-shell
     # noctalia
+    noctalia
   ];
 }
