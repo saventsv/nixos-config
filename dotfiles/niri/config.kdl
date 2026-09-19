@@ -101,6 +101,7 @@ binds {
     Mod+Ctrl+L { focus-monitor-right; }
     Mod+Ctrl+K    { focus-monitor-up; }
     Mod+Ctrl+J  { focus-monitor-down; }
+    Mod+Shift+F { fullscreen-window; }
 
     Mod+Ctrl+Shift+H  { move-column-to-monitor-left; }
     Mod+Ctrl+Shift+J  { move-column-to-monitor-down; }

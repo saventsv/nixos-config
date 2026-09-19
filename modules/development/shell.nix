@@ -1,9 +1,9 @@
 {pkgs, ...}:
 {
 
-  services.gnome.gcr-ssh-agent.enable = true;
+  services.gnome.gcr-ssh-agent.enable = false;
   services.gnome.gnome-keyring.enable = true;
-  programs.ssh.startAgent = false;
+  programs.ssh.startAgent = true;
 
   environment.systemPackages = with pkgs; [
     fd
