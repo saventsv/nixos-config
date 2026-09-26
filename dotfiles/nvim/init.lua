@@ -40,6 +40,7 @@ require("plugins.brackets")
 require("plugins.git")
 require("plugins.markdown")
 require("plugins.ui")
+require("plugins.wakatime")
 -- require("config.lsp")
 -- require("config.cmp")
 
