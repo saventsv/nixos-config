@@ -8,9 +8,9 @@
     ../modules/sessions/wayland.nix
     ../modules/sessions/desktops/dwm.nix
     ../modules/sessions/desktops/niri.nix
-    ../modules/sessions/desktops/kde.nix
-    ../modules/sessions/desktops/lxqt.nix
     ../modules/sessions/desktops/cosmic.nix
+    ../modules/sessions/desktops/gnome.nix
+    ../modules/sessions/desktops/cinnamon.nix
     ../modules/programs/talos.nix
     ../modules/programs/ventoy.nix
     ../modules/services/battery.nix
