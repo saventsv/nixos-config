@@ -9,6 +9,7 @@
     ../modules/sessions/desktops/dwm.nix
     ../modules/sessions/desktops/niri.nix
     ../modules/sessions/desktops/kde.nix
+    ../modules/sessions/desktops/lxqt.nix
     ../modules/sessions/desktops/cosmic.nix
     ../modules/programs/talos.nix
     ../modules/programs/ventoy.nix
