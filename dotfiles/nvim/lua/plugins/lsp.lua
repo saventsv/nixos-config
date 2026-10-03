@@ -138,21 +138,21 @@ vim.diagnostic.config({
   update_in_insert = false,
 })
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  callback = function ()
-    vim.diagnostic.open_float(nil, {
-      focus = false
-    })
-  end,
-})
-
-vim.api.nvim_create_autocmd("CursorHold", {
-  callback = function ()
-    vim.lsp.buf.hover({
-      focus = false
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function ()
+--     vim.diagnostic.open_float(nil, {
+--       focus = false
+--     })
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function ()
+--     vim.lsp.buf.hover({
+--       focus = false
+--     })
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "rust",

@@ -13,6 +13,7 @@
     gopls
     pyright
     nixd
+    vscode
     bash-language-server
     jdt-language-server
     clang-tools
